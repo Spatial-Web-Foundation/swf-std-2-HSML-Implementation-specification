@@ -1,0 +1,9 @@
+---
+metanorma:
+  source:
+    files:
+      - specification/hsml-implementation.adoc
+
+  collection:
+    name: HSML Implementation
+    organization: Spatial Web Foundation / IEEE

@@ -1,0 +1,33 @@
+name: generate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.head_ref || github.ref_name }}"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: metanorma/metanorma:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Cache Metanorma assets
+        uses: actions-mn/cache@v1
+
+      - name: Print Metanorma version
+        run: metanorma --version
+
+      - name: Metanorma generate site
+        uses: actions-mn/build-and-publish@v1
+        with:
+          agree-to-terms: true
+          destination: artifact
+          artifact-name: draft

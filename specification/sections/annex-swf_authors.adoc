@@ -1,0 +1,2 @@
+[appendix,obligation=informative]
+== SWF Authors

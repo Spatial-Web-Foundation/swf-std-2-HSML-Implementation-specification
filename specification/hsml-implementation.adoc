@@ -1,0 +1,52 @@
+= Spatial Web Implementation Specification -- HSML Implementation
+:docnumber: 2874.X
+:doctype: standard
+:docstage: draft
+:draft: 1
+:revdate: 2024-05-01
+:copyright-year: 2024
+:language: en
+:edition: 1
+:society: Computer Society
+:committee: C/AISC - Artificial Intelligence Standards Committee
+:working-group: Spatial Web Working Group
+:keywords: Hyperspace Transaction Protocol, HSTP, Spatial Web, Hyperspace Modelling Language, HSML, Universal Domain Graph, UDG, Spatial Web Identifier, SWID, W3C Decentralized Identifier (DID), Verifiable Credentials
+:isbn-pdf: 978-0-XXXX-XXXX-X STDXXXXX
+:isbn-print: 978-0-XXXX-XXXX-X STDPDXXXXX
+:imagesdir: images
+:mn-document-class: ieee
+:mn-output-extensions: xml,html,doc,rxl,pdf
+:local-cache-only:
+:toc-figures: true
+:toc-tables: true
+
+// Approval date
+//:confirmation-date: 2022-05-01
+
+include::sections/00-participants.adoc[]
+
+include::sections/00-abstract.adoc[]
+
+include::sections/00-introduction.adoc[]
+
+include::sections/01-overview.adoc[]
+
+include::sections/02-normrefs.adoc[]
+
+include::sections/03-terms.adoc[]
+
+include::sections/04-technical_clause.adoc[]
+
+include::sections/05-technical_clause.adoc[]
+
+include::sections/06-technical_clause.adoc[]
+
+include::sections/07-technical_clause.adoc[]
+
+include::sections/annex-compliance.adoc[]
+
+include::sections/annex-system_requirements.adoc[]
+
+include::sections/annex-bibliography.adoc[]
+
+include::sections/annex-swf_authors.adoc[]
