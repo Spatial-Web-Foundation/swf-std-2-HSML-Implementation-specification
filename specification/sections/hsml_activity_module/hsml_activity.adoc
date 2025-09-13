@@ -1,7 +1,7 @@
 [[act-activity]]
 === Class: act:Activity
 
-The class `act:Activity` realises the **ACTIVITY** concept defined in IEEE P2874 § 6.6.3:
+The class `act:Activity` realises the **ACTIVITY** concept defined in <<ieee-p2874,clause="6.6.3">>:
 
 “An ACTIVITY is an execution-time entity representing a single, concrete, stateful instance of an `act:ActivitySchema` performed by a specific agent at a specific time.”
 
@@ -106,7 +106,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | **Property** | `act:activitySchema`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/activity#activitySchema`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/activity#activitySchema]
 | **JSON name** | `activitySchema`
 | **Requirement Level** | **Mandatory**
 | **Cardinality** | 1..1
@@ -122,7 +122,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | **Property** | `act:performedBy`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/activity#performedBy`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/activity#performedBy]
 | **JSON name** | `performedBy`
 | **Requirement Level** | **Mandatory**
 | **Cardinality** | 1..*
@@ -138,7 +138,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | **Property** | `act:status`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/activity#status`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/activity#status]
 | **JSON name** | `status`
 | **Requirement Level** | **Mandatory**
 | **Cardinality** | 1..1
@@ -154,7 +154,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | **Property** | `act:hasBinding`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/activity#hasBinding`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/activity#hasBinding]
 | **JSON name** | `hasBinding`
 | **Requirement Level** | Conditional
 | **Cardinality** | 0..*
@@ -170,7 +170,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | **Property** | `schema:startTime`
-| **IRI** | `https://schema.org/startTime`
+| **IRI** | identifier:[https://schema.org/startTime]
 | **JSON name** | `startTime`
 | **Requirement Level** | Recommended
 | **Cardinality** | 0..1
@@ -186,7 +186,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | **Property** | `schema:endTime`
-| **IRI** | `https://schema.org/endTime`
+| **IRI** | identifier:[https://schema.org/endTime]
 | **JSON name** | `endTime`
 | **Requirement Level** | Recommended
 | **Cardinality** | 0..1
@@ -202,7 +202,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | **Property** | `dct:isPartOf`
-| **IRI** | `http://purl.org/dc/terms/isPartOf`
+| **IRI** | identifier:[http://purl.org/dc/terms/isPartOf]
 | **JSON name** | `isPartOf`
 | **Requirement Level** | Optional
 | **Cardinality** | 0..1
@@ -218,7 +218,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | **Property** | `act:realizedStep`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/activity#realizedStep`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/activity#realizedStep]
 | **JSON name** | `realizedStep`
 | **Requirement Level** | Optional
 | **Cardinality** | 0..1

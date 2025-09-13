@@ -51,7 +51,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | Property | core:hasShape
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/core#hasShape
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/core#hasShape]
 | JSON name | hasShape
 | Requirement Level | Mandatory
 | Cardinality | 1..1

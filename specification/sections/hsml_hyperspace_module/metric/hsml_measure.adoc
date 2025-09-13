@@ -106,7 +106,7 @@
 [cols="2,4"]
 |===
 | Property | metric:usingMetric
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#usingMetric
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#usingMetric]
 
 | Domain | metric:Measure
 | Range | metric:Metric
@@ -120,7 +120,7 @@
 [cols="2,4"]
 |===
 | Property | metric:from
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#from
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#from]
 
 | Domain | metric:Measure
 | Range | rdfs:Resource or rdfs:Literal
@@ -134,7 +134,7 @@
 [cols="2,4"]
 |===
 | Property | metric:to
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#to
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#to]
 
 | Domain | metric:Measure
 | Range | rdfs:Resource or rdfs:Literal
@@ -148,7 +148,7 @@
 [cols="2,4"]
 |===
 | Property | metric:value
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#value
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#value]
 
 | Domain | metric:Measure
 | Range | rdfs:Literal (numeric)
@@ -162,7 +162,7 @@
 [cols="2,4"]
 |===
 | Property | metric:unit
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#unit
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#unit]
 
 | Domain | metric:Measure
 | Range | IRI
@@ -176,7 +176,7 @@
 [cols="2,4"]
 |===
 | Property | metric:confidence
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#confidence
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#confidence]
 
 | Domain | metric:Measure
 | Range | xsd:decimal

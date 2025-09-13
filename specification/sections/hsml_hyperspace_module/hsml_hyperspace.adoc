@@ -1,7 +1,7 @@
 [[hsml-hyperspace]]
 === Class: hspace:Hyperspace
 
-The class hspace:Hyperspace realises the HYPERSPACE concept in IEEE P2874 § 6.6.3 and Hyperspace Modeling principles:
+The class hspace:Hyperspace realises the HYPERSPACE concept in <<ieee-p2874,clause="6.6.3">> and Hyperspace Modeling principles:
 
 “A HYPERSPACE is a spatial structure that specifies relationships among elements (points) in a DOMAIN, including notions such as adjacency, distance, connectivity, or metric, enabling spatial reasoning and operations within the Spatial Web.”
 
@@ -20,7 +20,7 @@ This specification separates:
 .Class Definition for hspace:Hyperspace
 [cols="1,3"]
 |===
-| RDF Class | +hspace:Hyperspace+
+| RDF Class | `hspace:Hyperspace`
 | Is Abstract | No
 | Definition | A spatial structure attached to a Domain that defines relationships among its elements, supporting spatial reasoning, navigation, and operations.
 | Subclass Of | hspace:Entity
@@ -31,12 +31,12 @@ This specification separates:
 [[hsml-hyperspace-properties-summary]]
 ==== Hyperspace Properties (Summary)
 
-.Properties Summary for +hspace:Hyperspace+
+.Properties Summary for `hspace:Hyperspace`
 [cols="1,1,3,1",options="header"]
 |===
 | Predicate | JSON(-LD) name | Description | Cardinality
 
-| <<property-hyperspace-type,rdf:type>> | @type | Declares the resource as an instance of +hspace:Hyperspace+. | 1..n
+| <<property-hyperspace-type,rdf:type>> | @type | Declares the resource as an instance of `hspace:Hyperspace`. | 1..n
 | <<property-hyperspace-swid,hspace:swid>> | swid | Spatial Web Identifier conformant with W3C DID Core. | 1
 
 | <<property-hyperspace-hasElementType,hspace:hasElementType>> | hasElementType | Type of elements (class or datatype) represented in the Hyperspace. | 1
@@ -60,7 +60,7 @@ This specification separates:
 | Cardinality | 1..n
 | Domain | hspace:Hyperspace
 | Range | hspace:Hyperspace
-| Definition | Declares the resource as an instance of +hspace:Hyperspace+.
+| Definition | Declares the resource as an instance of `hspace:Hyperspace`.
 |===
 
 
@@ -72,14 +72,14 @@ This specification separates:
 [cols="2,4"]
 |===
 | Property | hspace:hasElementType
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#hasElementType
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#hasElementType]
 | JSON name | hasElementType
 | Requirement Level | Mandatory
 | Cardinality | 1
 | Domain | hspace:Hyperspace
 | Range | rdfs:Class or datatype IRI
 | Definition | Identifies the type of elements (points) comprising the Hyperspace.
-| Usage Note | Examples: +geo:Geometry+, +hspace:Cell+, +xsd:string+, +geo:wktLiteral+.
+| Usage Note | Examples: `geo:Geometry`, `hspace:Cell`, `xsd:string`, `geo:wktLiteral`.
 |===
 
 [[property-hyperspace-hasArrowType]]
@@ -89,14 +89,14 @@ This specification separates:
 [cols="2,4"]
 |===
 | Property | hspace:hasArrowType
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#hasArrowType
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#hasArrowType]
 | JSON name | hasArrowType
 | Requirement Level | Mandatory
 | Cardinality | 1
 | Domain | hspace:Hyperspace
 | Range | owl:ObjectProperty IRI or rdfs:Class
 | Definition | Identifies the atomic one-step relation (“arrow”) connecting elements.
-| Usage Note | Use an object property IRI for direct edges (e.g., +ex:connect+). If using reified edges, +hasArrowType+ MAY point to the edge class (defined outside this section).
+| Usage Note | Use an object property IRI for direct edges (e.g., `ex:connect`). If using reified edges, `hasArrowType` MAY point to the edge class (defined outside this section).
 |===
 
 [[property-hyperspace-hasPathType]]
@@ -105,14 +105,14 @@ This specification separates:
 [cols="2,4"]
 |===
 | Property | hspace:hasPathType
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#hasPathType
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#hasPathType]
 | JSON name | hasPathType
 | Requirement Level | Optional
 | Cardinality | 0..n
 | Domain | hspace:Hyperspace
 | Range | rdfs:Class or datatype IRI
 | Definition | Identifies the type(s) of composed paths (finite compositions of arrows) recognised in the Hyperspace.
-| Usage Note | Examples: +hspace:Path+, +ex:Route+, +vector:LineString+, +geo:wktLiteral+ (LINESTRING).
+| Usage Note | Examples: `hspace:Path`, `ex:Route`, `vector:LineString`, `geo:wktLiteral` (LINESTRING).
 |===
 
 [[property-hyperspace-arrowProperty]]
@@ -122,14 +122,14 @@ This specification separates:
 [cols="2,4"]
 |===
 | Property | hspace:arrowProperty
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#arrowProperty
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#arrowProperty]
 | JSON name | arrowProperty
 | Requirement Level | Optional
 | Cardinality | 0..1
 | Domain | hspace:Hyperspace
 | Range | owl:ObjectProperty IRI
 | Definition | Declares the RDF predicate used to encode atomic steps (arrows) as direct edges.
-| Usage Note | Enables reachability via SPARQL property paths, e.g., +( ?arrow )+.
+| Usage Note | Enables reachability via SPARQL property paths, e.g., `( ?arrow )`.
 |===
 
 [[property-hyperspace-hasOperation]]
@@ -139,7 +139,7 @@ This specification separates:
 [cols="2,4"]
 |===
 | Property | hspace:hasOperation
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#hasOperation
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#hasOperation]
 | JSON name | hasOperation
 | Requirement Level | Optional
 | Cardinality | 0..n
@@ -157,7 +157,7 @@ This specification separates:
 [[hspace-elementclass-properties]]
 === Element-Class Properties
 
-These properties are used **on element instances** (when `hspace:hasElementType` is a class).  
+These properties are used **on element instances** (when `hspace:hasElementType` is a class).
 They are not properties of the `hspace:Hyperspace` resource itself.
 
 [[hspace-elementclass-properties-summary]]
@@ -178,7 +178,7 @@ They are not properties of the `hspace:Hyperspace` resource itself.
 [cols="2,4"]
 |===
 | Property | hspace:elementValue
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#elementValue
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#elementValue]
 | JSON name | elementValue
 | Requirement Level | Optional
 | Cardinality | 0..1
@@ -191,7 +191,7 @@ They are not properties of the `hspace:Hyperspace` resource itself.
 [[hspace-pathclass-properties]]
 === Path-Class Properties
 
-These properties are used **on path instances** (i.e., resources of the class named by `hspace:hasPathType` when that range is a class).  
+These properties are used **on path instances** (i.e., resources of the class named by `hspace:hasPathType` when that range is a class).
 They are not properties of the `hspace:Hyperspace` resource itself.
 
 [[hspace-pathclass-properties-summary]]
@@ -219,7 +219,7 @@ They are not properties of the `hspace:Hyperspace` resource itself.
 [cols="2,4"]
 |===
 | Property | hspace:startsAt
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#startsAt
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#startsAt]
 | JSON name | startsAt
 | Requirement Level | Optional
 | Cardinality | 0..1
@@ -234,7 +234,7 @@ They are not properties of the `hspace:Hyperspace` resource itself.
 [cols="2,4"]
 |===
 | Property | hspace:endsAt
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#endsAt
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#endsAt]
 | JSON name | endsAt
 | Requirement Level | Optional
 | Cardinality | 0..1
@@ -249,7 +249,7 @@ They are not properties of the `hspace:Hyperspace` resource itself.
 [cols="2,4"]
 |===
 | Property | hspace:pathStep
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#pathStep
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#pathStep]
 | JSON name | pathStep
 | Requirement Level | Optional
 | Cardinality | 0..1
@@ -264,7 +264,7 @@ They are not properties of the `hspace:Hyperspace` resource itself.
 [cols="2,4"]
 |===
 | Property | hspace:onPath
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#onPath
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#onPath]
 | JSON name | onPath
 | Requirement Level | Optional
 | Cardinality | 0..1
@@ -279,7 +279,7 @@ They are not properties of the `hspace:Hyperspace` resource itself.
 [cols="2,4"]
 |===
 | Property | hspace:startsAtValue
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#startsAtValue
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#startsAtValue]
 | JSON name | startsAtValue
 | Requirement Level | Optional
 | Cardinality | 0..1
@@ -294,7 +294,7 @@ They are not properties of the `hspace:Hyperspace` resource itself.
 [cols="2,4"]
 |===
 | Property | hspace:endsAtValue
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#endsAtValue
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#endsAtValue]
 | JSON name | endsAtValue
 | Requirement Level | Optional
 | Cardinality | 0..1
@@ -309,7 +309,7 @@ They are not properties of the `hspace:Hyperspace` resource itself.
 [cols="2,4"]
 |===
 | Property | hspace:stepList
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#stepList
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#stepList]
 | JSON name | stepList
 | Requirement Level | Optional
 | Cardinality | 0..1
@@ -324,7 +324,7 @@ They are not properties of the `hspace:Hyperspace` resource itself.
 [cols="2,4"]
 |===
 | Property | hspace:pathValue
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#pathValue
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#pathValue]
 | JSON name | pathValue
 | Requirement Level | Optional
 | Cardinality | 0..1

@@ -70,7 +70,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | Property | core:hasSpace
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/core#hasSpace
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/core#hasSpace]
 | JSON name | hasSpace
 | Requirement Level| Optional
 | Cardinality| 0..*
@@ -88,7 +88,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | Property | core:managedBy
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/core#managedBy
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/core#managedBy]
 | JSON name | managedBy
 | Requirement Level | Mandatory
 | Cardinality | 1..1

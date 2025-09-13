@@ -76,33 +76,45 @@ The implementation of HSML is guided by design principles that ensure the specif
 To manage complexity and support broad adoption, the HSML specification is organized into a **Core Model** and a set of **modular extensions**. This modular design ensures maximum reusability with minimal ontological commitment, allowing implementers to adopt only the components relevant to their application while maintaining interoperability across the Spatial Web.
 
 * *Core Model:*
-  The Core Model defines the most fundamental and universal constructs of HSML. It establishes:
-  ** *Entity* – the universal superclass for all things in the Spatial Web, each identified by a Spatial Web Identifier (SWID/DID).
-  ** *Domain* – a specialized kind of entity functioning as a holon, encapsulating identity, governance, and scope.
-  ** *Foundational relationships* – common properties for identity, membership, composition, and linkage across entities and domains.
-  The Core Model is the **semantic foundation** upon which all other modules are built.
+The Core Model defines the most fundamental and universal constructs of HSML. It establishes:
+
+** *Entity* – the universal superclass for all things in the Spatial Web, each identified by a Spatial Web Identifier (SWID/DID).
+
+** *Domain* – a specialized kind of entity functioning as a holon, encapsulating identity, governance, and scope.
+
+** *Foundational relationships* – common properties for identity, membership, composition, and linkage across entities and domains.
+
++
+The Core Model is the **semantic foundation** upon which all other modules are built.
 
 * *Modules:*
-  Building on the Core Model, HSML defines a set of modules that introduce specialized constructs for particular functional areas. Each module adds only the minimum commitments necessary to support its scope, ensuring extensibility and reuse:
-  ** *Agent Module* – defines persons, organizations, and autonomous systems as domains with agency, goals, and capabilities.
-  ** *Activity Module* – defines structured processes, schemas, instances, and execution lifecycles that domains can perform.
-  ** *Hyperspace Module* – defines the spatial and structural contexts where entities relate.
-     – The Hyperspace Module is itself **composed of submodules** for different space types: *Topological Space*, *Metric Space*, *Vector Space*, *Cellular Space*, *Graph Space*, and *Datatype Space*.
-  ** *Communication Module* – defines **Channels** as the semantic construct for communication and coordination.
-   – A Channel is a stream of HSML entities bound to a specific Activity, enabling message exchange, data flow, and coordination among participants.
-   – Channels are **transient**: unlike Domains, they do not carry persistent holonic identity but exist in relation to an Activity context.
-   – The module provides constructs for sub-channels, membership, and message traceability, aligning with HSTP message envelopes for interoperable communication.
-  ** *Governance Module* – defines credentials, contracts, norms, and policies that domains declare and enforce.
+Building on the Core Model, HSML defines a set of modules that introduce specialized constructs for particular functional areas. Each module adds only the minimum commitments necessary to support its scope, ensuring extensibility and reuse:
+
+** *Agent Module* – defines persons, organizations, and autonomous systems as domains with agency, goals, and capabilities.
+
+** *Activity Module* – defines structured processes, schemas, instances, and execution lifecycles that domains can perform.
+
+** *Hyperspace Module* – defines the spatial and structural contexts where entities relate.
+
+*** The Hyperspace Module is itself **composed of submodules** for different space types: *Topological Space*, *Metric Space*, *Vector Space*, *Cellular Space*, *Graph Space*, and *Datatype Space*.
+
+** *Communication Module* – defines **Channels** as the semantic construct for communication and coordination.
+
+*** A Channel is a stream of HSML entities bound to a specific Activity, enabling message exchange, data flow, and coordination among participants.
+
+*** Channels are **transient**: unlike Domains, they do not carry persistent holonic identity but exist in relation to an Activity context.
+
+*** The module provides constructs for sub-channels, membership, and message traceability, aligning with HSTP message envelopes for interoperable communication.
+
+** *Governance Module* – defines credentials, contracts, norms, and policies that domains declare and enforce.
 
 This modular architecture enables **plug-and-play deployment**: implementers can select the subset of modules required for their application, while remaining compatible with the broader HSML ecosystem and the IEEE P2874 Spatial Web standard (see <<fig-hsml-core-modules>>).
 
 
-[.text-center]
---
 [[fig-hsml-core-modules]]
 .HSML Core Model and Modules with Hyperspace Submodules
-image::../images/hsml_core_modules.png[width=600,align=center]
---
+image::hsml_core_modules.png[]
+
 
 === Extension Mechanisms
 
@@ -110,24 +122,45 @@ Recognizing that no single specification can anticipate all future needs, HSML p
 
 * *Profiles:*
 A profile is a curated collection of HSML modules, constraints, and optional extensions tailored for a particular application or industry. Profiles act as **vertical specializations** while remaining grounded in the common HSML core.
-** Example: A *Smart Mobility Profile* may combine the Agent, Activity, and Hyperspace modules with a custom *Transportation* schema to support autonomous vehicle networks.
-** Example: A *Digital Health Profile* may combine the Governance module with domain-specific ontologies for medical credentials, ensuring trust and compliance.
++
+[example]
+====
+A *Smart Mobility Profile* may combine the Agent, Activity, and Hyperspace modules with a custom *Transportation* schema to support autonomous vehicle networks.
+====
++
+[example]
+====
+A *Digital Health Profile* may combine the Governance module with domain-specific ontologies for medical credentials, ensuring trust and compliance.
+====
++
 Profiles promote interoperability by establishing shared constraints within a sector, while still ensuring cross-domain compatibility through the HSML foundation.
 
 
 * *Custom Schemas:*
 For more granular or domain-specific needs, developers may define custom schemas by reusing Semantic Web standards:
+
 ** *OWL 2* for declaring new types of entities, domains, properties, and relationships.
+
 ** *SHACL* for defining constraints, validation rules, and profiles that data instances must satisfy.
+
 ** *RDF-star and SHACL rules* for expressing richer link types (e.g., weighted, temporal, or probabilistic edges).
-These schemas can be registered, published, and shared across domains, allowing the Spatial Web ontology to **grow organically while preserving coherence**.
+
++
+These schemas can be registered, published, and shared across domains, allowing
+the Spatial Web ontology to **grow organically while preserving coherence**.
 
 * *Hyperspace Extensions:*
 The Hyperspace Module is intentionally **open-ended**. In addition to its current submodules (*Topological*, *Metric*, *Vector*, *Cellular*, *Graph*, and *Datatype Spaces*), P2874 anticipates other space types that can be added as extensions. Examples include:
+
 ** *Probabilistic Spaces* – where paths carry uncertainty or probability weights, supporting stochastic modeling.
+
 ** *State-Machine Spaces* – where points represent states and paths represent transitions, aligning with process or workflow modeling.
+
 ** *Observation/Data-Cube Spaces* – treating multi-dimensional data (e.g., sensor arrays, statistical cubes) as hyperspaces.
+
 ** *Quantum or Hilbert Spaces* – supporting future quantum computation or simulation domains.
+
++
 New types can be introduced simply by declaring subclasses of `hsml:Hyperspace`, ensuring extensibility without changes to the Core Model.
 
 * *Governance Extensions:*

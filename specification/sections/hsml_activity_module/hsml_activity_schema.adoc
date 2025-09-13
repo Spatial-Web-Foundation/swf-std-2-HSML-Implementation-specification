@@ -1,11 +1,14 @@
 [[act-activityschema]]
 === Class: `act:ActivitySchema`
 
-The class `act:ActivitySchema` realises the ACTIVITY SCHEMA concept defined in IEEE P2874 § 6.6.3:
+The class `act:ActivitySchema` realises the ACTIVITY SCHEMA concept defined in <<HSML,clause="6.6.3">>:
 
-“An ACTIVITY SCHEMA is an ENTITY that defines the template, structure, or plan for an ACTIVITY, specifying its preconditions, postconditions, roles, and expected outcomes.”
+[quote]
+____
+An ACTIVITY SCHEMA is an ENTITY that defines the template, structure, or plan for an ACTIVITY, specifying its preconditions, postconditions, roles, and expected outcomes.
+____
 
-`act:ActivitySchema` provides the abstract, reusable blueprint for an act:Activity. It enables the consistent modeling of repeatable processes by defining the action's interface (inputs/outputs), its required logical state (preconditions), and its expected results (effects).
+`act:ActivitySchema` provides the abstract, reusable blueprint for an `act:Activity`. It enables the consistent modeling of repeatable processes by defining the action's interface (inputs/outputs), its required logical state (preconditions), and its expected results (effects).
 
 Key Requirements
 
@@ -95,7 +98,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | Property | `act:hasInput`
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/activity#hasInput
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/activity#hasInput]
 | JSON name | "hasInput"
 | Requirement Level | Optional
 | Cardinality | 0..n
@@ -112,7 +115,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | Property | `act:hasOutput`
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/activity#hasOutput
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/activity#hasOutput]
 | JSON name | "hasOutput"
 | Requirement Level | Optional
 | Cardinality | 0..n
@@ -129,7 +132,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | Property | `act:hasPrecondition`
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/activity#hasPrecondition
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/activity#hasPrecondition]
 | JSON name | "hasPrecondition"
 | Requirement Level
 | Optional
@@ -150,7 +153,7 @@ hasPrecondition
 [cols="2,4"]
 |===
 | Property | `act:hasEffect``
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/activity#hasEffect
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/activity#hasEffect]
 | JSON name | "hasEffect"
 | Requirement Level | Optional
 | Cardinality | 0..n

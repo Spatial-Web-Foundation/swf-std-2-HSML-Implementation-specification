@@ -2,106 +2,106 @@
 
 === Introduction
 
-The TopologicalSpace Module specializes the Hyperspace abstraction for structures defined by **neighborhoods, adjacency, and continuity**, rather than numeric coordinates.  
-It realizes the *TOPOLOGICAL SPACE* concept referenced in IEEE P2874 (§ 6.2.1) and HSML Hyperspace design:
+The TopologicalSpace Module specializes the Hyperspace abstraction for structures defined by **neighborhoods, adjacency, and continuity**, rather than numeric coordinates.
+It realizes the *TOPOLOGICAL SPACE* concept referenced in <<ieee-p2874,clause="6.2.1">> and HSML Hyperspace design:
 
 ____
 “A topological space is a set of elements together with a structure that specifies which subsets are ‘open,’
 thereby defining notions of adjacency, neighborhood, and continuity without reference to metric distance.”
 ____
 
-In HSML, a TopologicalSpace provides a declarative way to represent **connectivity, adjacency, boundaries, and regions**.  
+In HSML, a TopologicalSpace provides a declarative way to represent **connectivity, adjacency, boundaries, and regions**.
 It is the natural home for **geometries beyond points**, including *LineStrings*, *Polygons*, and *Spheres*, which are not valid vector elements but can be modeled in a topological sense.
 
 Typical use cases include:
 
-* Geographic features — regions, boundaries, polygonal areas, networks of connected edges.  
-* Computational grids — adjacency of cells in raster or tessellated models.  
-* Continuity spaces — abstract topologies for states, neighborhoods, or coverage.  
+* Geographic features — regions, boundaries, polygonal areas, networks of connected edges.
+* Computational grids — adjacency of cells in raster or tessellated models.
+* Continuity spaces — abstract topologies for states, neighborhoods, or coverage.
 
-A TopologicalSpace inherits from `hspace:Hyperspace` and introduces adjacency and region semantics.  
+A TopologicalSpace inherits from `hspace:Hyperspace` and introduces adjacency and region semantics.
 It does not assume distances (`metric:Metric`) unless combined with a MetricSpace; instead, it captures **purely topological relations**.
 
 === Architecture and Design Rationale
 
 ==== Core Principle
-TopologicalSpaces in HSML are **relation-first**: they define what is “next to” or “contained in what,” rather than how far apart elements are.  
+TopologicalSpaces in HSML are **relation-first**: they define what is “next to” or “contained in what,” rather than how far apart elements are.
 This makes them suitable for **qualitative spatial reasoning** and **boundary-driven models**.
 
 ==== Subclassing Strategy
-* `topo:TopologicalSpace` is a subclass of `hspace:Hyperspace`.  
+* `topo:TopologicalSpace` is a subclass of `hspace:Hyperspace`.
 * Optional specializations include:
-  - `topo:TopologicalMetricSpace` — adds metric distance on top of adjacency.  
-  - `topo:CellularSpace` — specialization for discrete grids and tessellations.  
+  - `topo:TopologicalMetricSpace` — adds metric distance on top of adjacency.
+  - `topo:CellularSpace` — specialization for discrete grids and tessellations.
 
 ==== Elements and Paths
-* **Element Type** — any spatial unit such as `geo:Polygon`, `geo:LineString`, or `cell:Cell`.  
-* **Path Type** — adjacency relations such as `topo:adjacentTo` or `topo:connectedTo`.  
-* Elements may represent continuous regions (polygons, spheres) or discrete cells.  
-* Paths represent adjacency chains (sequences of touching elements, border walks).  
+* **Element Type** — any spatial unit such as `geo:Polygon`, `geo:LineString`, or `cell:Cell`.
+* **Path Type** — adjacency relations such as `topo:adjacentTo` or `topo:connectedTo`.
+* Elements may represent continuous regions (polygons, spheres) or discrete cells.
+* Paths represent adjacency chains (sequences of touching elements, border walks).
 
 ==== Neighborhoods and Open Sets
 Unlike VectorSpaces, which define neighborhoods via coordinates and metrics, TopologicalSpaces rely on **declared adjacency** or **open sets**:
 
-* `topo:hasNeighborhood` links an element to its set of neighboring elements.  
-* SHACL profiles may constrain neighborhood semantics (e.g., Moore vs. Von Neumann adjacency in a grid).  
+* `topo:hasNeighborhood` links an element to its set of neighboring elements.
+* SHACL profiles may constrain neighborhood semantics (e.g., Moore vs. Von Neumann adjacency in a grid).
 
 ==== Regions and Boundaries
 TopologicalSpaces support grouping and edge semantics:
 
-* `topo:Region` — a contiguous set of adjacent elements treated as one area.  
-* `topo:Boundary` — the separating edge or border between a region and its exterior.  
+* `topo:Region` — a contiguous set of adjacent elements treated as one area.
+* `topo:Boundary` — the separating edge or border between a region and its exterior.
 
 These abstractions allow modeling polygon boundaries, country borders, adjacency of cellular clusters, and more.
 
 ==== Generic Operations
 TopologicalSpaces extend the universal Hyperspace algebra with **qualitative operations**:
 
-* **Neighborhood query** — return adjacent elements of a given element.  
-* **Adjacency test** — check if two elements share a border or node.  
-* **Connectivity test** — check if two elements belong to the same connected component.  
-* **Path composition** — concatenate adjacency steps into longer paths.  
-* **Reachability** — determine if a path exists between two elements.  
-* **Boundary extraction** — identify the separating elements between regions.  
-* **Region closure / interior** — derive closed vs. open sets.  
-* **Union / intersection of regions** — form composite regions.  
-* **Subspace formation** — restrict to a subset of elements with induced adjacency.  
-* **Quotienting by equivalence** — merge elements under an equivalence relation (e.g., administrative aggregation).  
+* **Neighborhood query** — return adjacent elements of a given element.
+* **Adjacency test** — check if two elements share a border or node.
+* **Connectivity test** — check if two elements belong to the same connected component.
+* **Path composition** — concatenate adjacency steps into longer paths.
+* **Reachability** — determine if a path exists between two elements.
+* **Boundary extraction** — identify the separating elements between regions.
+* **Region closure / interior** — derive closed vs. open sets.
+* **Union / intersection of regions** — form composite regions.
+* **Subspace formation** — restrict to a subset of elements with induced adjacency.
+* **Quotienting by equivalence** — merge elements under an equivalence relation (e.g., administrative aggregation).
 
 These operations are **generic** and apply across polygonal, line-based, cellular, and spherical topologies.
 
 ==== Separation of Concerns
-* **Domain vs Hyperspace** — a Domain provides identity; attaching a TopologicalSpace defines adjacency and region semantics.  
-* **Topology vs Metric** — adjacency is qualitative; distances are layered on top when required.  
-* **Profiles** — SHACL profiles constrain adjacency semantics (e.g., polygons must be closed, cells must tessellate consistently).  
+* **Domain vs Hyperspace** — a Domain provides identity; attaching a TopologicalSpace defines adjacency and region semantics.
+* **Topology vs Metric** — adjacency is qualitative; distances are layered on top when required.
+* **Profiles** — SHACL profiles constrain adjacency semantics (e.g., polygons must be closed, cells must tessellate consistently).
 
 ==== Examples of Spaces
 
 TopologicalSpaces are not limited to geometry — they capture **adjacency and connectivity** in many domains:
 
-*Geometric Topologies*  
-- **Polygonal Topology**: elements are polygons; adjacency = “share an edge.”  
-- **Line Network**: elements are line segments; adjacency = “share a node.”  
-- **Spherical Topology**: elements are regions on a sphere; adjacency defined by great-circle boundaries.  
-- **Cellular/DGGS Topology**: elements are discrete cells; adjacency defined by tessellation rules.  
+*Geometric Topologies*
+- **Polygonal Topology**: elements are polygons; adjacency = “share an edge.”
+- **Line Network**: elements are line segments; adjacency = “share a node.”
+- **Spherical Topology**: elements are regions on a sphere; adjacency defined by great-circle boundaries.
+- **Cellular/DGGS Topology**: elements are discrete cells; adjacency defined by tessellation rules.
 
-*Computational / Data Structures*  
-- **Graph Topology**: elements are graph nodes; adjacency defined by edges.  
-- **Tree Topology**: elements are tree nodes; adjacency = parent–child relations.  
-- **Cellular Automaton Topology**: elements are cells; adjacency defined by automaton rules (Moore, Von Neumann).  
+*Computational / Data Structures*
+- **Graph Topology**: elements are graph nodes; adjacency defined by edges.
+- **Tree Topology**: elements are tree nodes; adjacency = parent–child relations.
+- **Cellular Automaton Topology**: elements are cells; adjacency defined by automaton rules (Moore, Von Neumann).
 
-*Abstract / Conceptual Topologies*  
-- **State Space Topology**: elements are states in a machine; adjacency defined by transitions.  
-- **Semantic Neighborhood Topology**: elements are SKOS concepts; adjacency via broader/narrower/related links.  
-- **Linguistic Topology**: elements are words; adjacency via co-occurrence in a context window.  
-- **Process Topology**: elements are workflow activities; adjacency via “precedes” or “depends on” relations.  
+*Abstract / Conceptual Topologies*
+- **State Space Topology**: elements are states in a machine; adjacency defined by transitions.
+- **Semantic Neighborhood Topology**: elements are SKOS concepts; adjacency via broader/narrower/related links.
+- **Linguistic Topology**: elements are words; adjacency via co-occurrence in a context window.
+- **Process Topology**: elements are workflow activities; adjacency via “precedes” or “depends on” relations.
 
-*Scientific / Physical Topologies*  
-- **Biological Cell Topology**: elements are cells in tissue; adjacency via direct contact.  
-- **Protein Folding Topology**: elements are amino acids; adjacency via sequential bonds + folding contacts.  
-- **Neural Network Topology**: elements are neurons; adjacency via synaptic connections.  
+*Scientific / Physical Topologies*
+- **Biological Cell Topology**: elements are cells in tissue; adjacency via direct contact.
+- **Protein Folding Topology**: elements are amino acids; adjacency via sequential bonds + folding contacts.
+- **Neural Network Topology**: elements are neurons; adjacency via synaptic connections.
 
 
 
-To summarize, the TopologicalSpace Module captures **adjacency and neighborhood semantics** without relying on coordinates or metrics.  
+To summarize, the TopologicalSpace Module captures **adjacency and neighborhood semantics** without relying on coordinates or metrics.
 It provides the structural foundation for representing **Polygons, LineStrings, Spheres, and beyond** as elements, enabling **qualitative reasoning, boundary logic, and region-based navigation** in HSML.

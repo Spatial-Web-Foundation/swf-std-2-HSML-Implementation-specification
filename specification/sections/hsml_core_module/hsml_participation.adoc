@@ -68,7 +68,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | Property | core:hasParticipant
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/core#hasParticipant
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/core#hasParticipant]
 | JSON name | hasParticipant
 | Requirement Level | Mandatory
 | Cardinality | 1..1
@@ -83,7 +83,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | Property | core:hasRole
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/core#hasRole
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/core#hasRole]
 | JSON name | hasRole
 | Requirement Level | Mandatory
 | Cardinality | 1..1
@@ -98,7 +98,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | Property | schema:startTime
-| IRI | https://schema.org/startTime
+| IRI | identifier:[https://schema.org/startTime]
 | JSON name | startTime
 | Requirement Level | Optional
 | Cardinality | 0..1
@@ -113,7 +113,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | Property | schema:endTime
-| IRI | https://schema.org/endTime
+| IRI | identifier:[https://schema.org/endTime]
 | JSON name | endTime
 | Requirement Level | Optional
 | Cardinality | 0..1

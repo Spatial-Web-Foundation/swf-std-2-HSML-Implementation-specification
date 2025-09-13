@@ -1,17 +1,17 @@
 [[hspace-path]]
 === Class: hspace:Path
 
-The class +hspace:Path+ represents a **composed path**: a finite composition of arrows in a given Hyperspace.
+The class `hspace:Path` represents a **composed path**: a finite composition of arrows in a given Hyperspace.
 It provides an identifiable resource on which systems can attach metadata, validate step coherence, and (optionally)
 serialize a concrete realization (e.g., a LineString or JSON sequence), without altering the core arrow-based semantics.
 
 [[hspace-path-class]]
 ==== Class Definition
 
-.Class Definition for +hspace:Path+
+.Class Definition for `hspace:Path`
 [cols="1,3"]
 |===
-| RDF Class | +hspace:Path+
+| RDF Class | `hspace:Path`
 | Is Abstract | No
 | Definition | A first-class representation of a composed path (finite sequence of arrows) within a Hyperspace.
 | Subclass Of | hspace:Entity
@@ -22,7 +22,7 @@ serialize a concrete realization (e.g., a LineString or JSON sequence), without 
 [[hspace-path-properties-summary]]
 ==== Properties Summary
 
-.Property Definitions for +hspace:Path+
+.Property Definitions for `hspace:Path`
 [cols="1,1,3,1",options="header"]
 |===
 | Predicate | JSON(-LD) name | Description | Cardinality
@@ -34,7 +34,7 @@ serialize a concrete realization (e.g., a LineString or JSON sequence), without 
 
 | <<property-path-startsAtValue,hspace:startsAtValue>> | startsAtValue | Start **literal** (when elements are literals). | 0..1
 | <<property-path-endsAtValue,hspace:endsAtValue>> | endsAtValue | End **literal** (when elements are literals). | 0..1
-| <<property-path-stepList,hspace:stepList>> | stepList | +rdf:List+ of ordered **literal** elements (when elements are literals). | 0..1
+| <<property-path-stepList,hspace:stepList>> | stepList | `rdf:List` of ordered **literal** elements (when elements are literals). | 0..1
 | <<property-path-pathValue,hspace:pathValue>> | pathValue | Serialized path payload (e.g., WKT/GeoJSON LineString, JSON array/polyline). | 0..1
 |===
 
@@ -47,14 +47,14 @@ serialize a concrete realization (e.g., a LineString or JSON sequence), without 
 [cols="2,4"]
 |===
 | Property | hspace:startsAt
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#startsAt
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#startsAt]
 | JSON name | startsAt
 | Requirement Level | Optional (resource-element profiles)
 | Cardinality | 0..1
 | Domain | hspace:Path (and subclasses)
-| Range | owl:ObjectProperty IRI (targeting the element class named by +hspace:hasElementType+)
+| Range | owl:ObjectProperty IRI (targeting the element class named by `hspace:hasElementType`)
 | Definition | Links a path to its start **element node** when elements are resources.
-| Usage Note | For literal-element profiles, use +hspace:startsAtValue+.
+| Usage Note | For literal-element profiles, use `hspace:startsAtValue`.
 |===
 
 [[property-path-endsAt]]
@@ -64,14 +64,14 @@ serialize a concrete realization (e.g., a LineString or JSON sequence), without 
 [cols="2,4"]
 |===
 | Property | hspace:endsAt
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#endsAt
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#endsAt]
 | JSON name | endsAt
 | Requirement Level | Optional (resource-element profiles)
 | Cardinality | 0..1
 | Domain | hspace:Path (and subclasses)
-| Range | owl:ObjectProperty IRI (targeting the element class named by +hspace:hasElementType+)
+| Range | owl:ObjectProperty IRI (targeting the element class named by `hspace:hasElementType`)
 | Definition | Links a path to its end **element node** when elements are resources.
-| Usage Note | For literal-element profiles, use +hspace:endsAtValue+.
+| Usage Note | For literal-element profiles, use `hspace:endsAtValue`.
 |===
 
 [[property-path-pathStep]]
@@ -81,14 +81,14 @@ serialize a concrete realization (e.g., a LineString or JSON sequence), without 
 [cols="2,4"]
 |===
 | Property | hspace:pathStep
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#pathStep
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#pathStep]
 | JSON name | pathStep
 | Requirement Level | Optional
 | Cardinality | 0..1
 | Domain | hspace:Path (and subclasses)
 | Range | owl:ObjectProperty IRI
 | Definition | Ordered property listing the steps of a path. Steps MAY reference elements, edges, or step nodes per profile.
-| Usage Note | Ordering MAY be expressed via RDF Collections (e.g., +rdf:List+) or +sh:order+ metadata on step nodes.
+| Usage Note | Ordering MAY be expressed via RDF Collections (e.g., `rdf:List`) or `sh:order` metadata on step nodes.
 |===
 
 [[property-path-onPath]]
@@ -98,7 +98,7 @@ serialize a concrete realization (e.g., a LineString or JSON sequence), without 
 [cols="2,4"]
 |===
 | Property | hspace:onPath
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#onPath
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#onPath]
 | JSON name | onPath
 | Requirement Level | Optional
 | Cardinality | 0..n
@@ -114,12 +114,12 @@ serialize a concrete realization (e.g., a LineString or JSON sequence), without 
 [cols="2,4"]
 |===
 | Property | hspace:startsAtValue
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#startsAtValue
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#startsAtValue]
 | JSON name | startsAtValue
 | Requirement Level | Optional (literal-element profiles)
 | Cardinality | 0..1
 | Domain | hspace:Path (and subclasses)
-| Range | rdfs:Literal (typed with the Hyperspace’s +hspace:hasElementType+ datatype)
+| Range | rdfs:Literal (typed with the Hyperspace’s `hspace:hasElementType` datatype)
 | Definition | Records the **start literal** of the path when elements are literals.
 |===
 
@@ -130,12 +130,12 @@ serialize a concrete realization (e.g., a LineString or JSON sequence), without 
 [cols="2,4"]
 |===
 | Property | hspace:endsAtValue
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#endsAtValue
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#endsAtValue]
 | JSON name | endsAtValue
 | Requirement Level | Optional (literal-element profiles)
 | Cardinality | 0..1
 | Domain | hspace:Path (and subclasses)
-| Range | rdfs:Literal (typed with the Hyperspace’s +hspace:hasElementType+ datatype)
+| Range | rdfs:Literal (typed with the Hyperspace’s `hspace:hasElementType` datatype)
 | Definition | Records the **end literal** of the path when elements are literals.
 |===
 
@@ -146,14 +146,14 @@ serialize a concrete realization (e.g., a LineString or JSON sequence), without 
 [cols="2,4"]
 |===
 | Property | hspace:stepList
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#stepList
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#stepList]
 | JSON name | stepList
 | Requirement Level | Optional (literal-element profiles)
 | Cardinality | 0..1
 | Domain | hspace:Path (and subclasses)
 | Range | rdf:List
 | Definition | Points to an RDF Collection whose items are the ordered **literal elements** that constitute the path.
-| Usage Note | Each list item **MUST** be typed with the datatype named by +hspace:hasElementType+ when elements are literals.
+| Usage Note | Each list item **MUST** be typed with the datatype named by `hspace:hasElementType` when elements are literals.
 |===
 
 [[property-path-pathValue]]
@@ -163,7 +163,7 @@ serialize a concrete realization (e.g., a LineString or JSON sequence), without 
 [cols="2,4"]
 |===
 | Property | hspace:pathValue
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#pathValue
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#pathValue]
 | JSON name | pathValue
 | Requirement Level | Optional
 | Cardinality | 0..1
@@ -175,7 +175,7 @@ serialize a concrete realization (e.g., a LineString or JSON sequence), without 
 
 [NOTE]
 ====
-*Conformance.* A profile that names a class in +hspace:hasPathType+ MAY use +hspace:Path+ directly or a subclass thereof (e.g., +ex:Route+, +vector:LineString+), applying the properties above as appropriate to the element representation (resource-based or literal-based).
+*Conformance.* A profile that names a class in `hspace:hasPathType` MAY use `hspace:Path` directly or a subclass thereof (e.g., `ex:Route`, `vector:LineString`), applying the properties above as appropriate to the element representation (resource-based or literal-based).
 ====
 
 

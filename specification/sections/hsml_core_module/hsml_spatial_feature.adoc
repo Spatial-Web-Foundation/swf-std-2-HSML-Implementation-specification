@@ -1,7 +1,7 @@
 [[core-spatialfeature]]
 === Class:  core:SpatialFeature
 
-The class core:SpatialFeature realises the SPATIAL FEATURE concept, corresponding to the GEOGRAPHIC DOMAIN type described in IEEE P2874 § 6.3.2.1.2:
+The class core:SpatialFeature realises the SPATIAL FEATURE concept, corresponding to the GEOGRAPHIC DOMAIN type described in <<ieee-p2874,clause="6.3.2.1.2">>:
 
 “A SPATIAL FEATURE is an ENTITY representing a location-bound or geometry-bearing element within a Domain, corresponding to a GEOGRAPHIC DOMAIN type where position, extent, or spatial relationships are essential.”
 

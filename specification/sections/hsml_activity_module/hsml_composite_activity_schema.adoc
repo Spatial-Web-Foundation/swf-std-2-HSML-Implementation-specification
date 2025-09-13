@@ -1,7 +1,7 @@
 [[act-compositeactivityschema]]
 === Class: act:CompositeActivitySchema
 
-The class `act:CompositeActivitySchema` realizes the **COMPOSITE ACTIVITY SCHEMA** concept, which extends the `act:ActivitySchema` to model complex, multi-step workflows as defined in IEEE P2874 § 6.6.3.
+The class `act:CompositeActivitySchema` realizes the **COMPOSITE ACTIVITY SCHEMA** concept, which extends the `act:ActivitySchema` to model complex, multi-step workflows as defined in <<ieee-p2874,clause="6.6.3">>.
 
 A `act:CompositeActivitySchema` is a schema for a complex workflow composed of other activities. It acts as a container for a set of `act:ActivityStep` instances and defines the control and data flow between them. This enables the modeling of sophisticated processes like sequences, choices, and parallel operations.
 
@@ -77,7 +77,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | **Property** | `act:hasStep`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/activity#hasStep`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/activity#hasStep]
 | **JSON name** | `hasStep`
 | **Requirement Level** | **Mandatory**
 | **Cardinality** | 1..*
@@ -93,7 +93,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | **Property** | `act:hasDataLink`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/activity#hasDataLink`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/activity#hasDataLink]
 | **JSON name** | `hasDataLink`
 | **Requirement Level** | Optional
 | **Cardinality** | 0..*
@@ -109,7 +109,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | **Property** | `act:hasOrderedSteps`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/activity#hasOrderedSteps`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/activity#hasOrderedSteps]
 | **JSON name** | `hasOrderedSteps`
 | **Requirement Level** | Conditional
 | **Cardinality** | 0..1
@@ -125,7 +125,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | **Property** | `act:hasChoice`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/activity#hasChoice`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/activity#hasChoice]
 | **JSON name** | `hasChoice`
 | **Requirement Level** | Conditional
 | **Cardinality** | 0..*
@@ -141,7 +141,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | **Property** | `act:hasUnorderedSteps`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/activity#hasUnorderedSteps`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/activity#hasUnorderedSteps]
 | **JSON name** | `hasUnorderedSteps`
 | **Requirement Level** | Conditional
 | **Cardinality** | 0..*

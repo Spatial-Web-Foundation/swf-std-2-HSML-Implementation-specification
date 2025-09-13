@@ -132,7 +132,7 @@ Messages are not required for all exchanges. Implementations materialize comm:Me
 [cols="2,4"]
 |===
 | Property | comm:inChannel
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/comm#inChannel
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/comm#inChannel]
 | JSON name | inChannel
 | Requirement Level | Mandatory
 | Cardinality | 1..1
@@ -148,7 +148,7 @@ Messages are not required for all exchanges. Implementations materialize comm:Me
 [cols="2,4"]
 |===
 | Property | comm:aboutActivity
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/comm#aboutActivity
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/comm#aboutActivity]
 | JSON name | aboutActivity
 | Requirement Level | Mandatory
 | Cardinality | 1..*
@@ -164,7 +164,7 @@ Messages are not required for all exchanges. Implementations materialize comm:Me
 [cols="2,4"]
 |===
 | Property | comm:sender
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/comm#sender
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/comm#sender]
 | JSON name | sender
 | Requirement Level | Mandatory
 | Cardinality | 1..*
@@ -180,7 +180,7 @@ Messages are not required for all exchanges. Implementations materialize comm:Me
 [cols="2,4"]
 |===
 | Property | comm:recipient
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/comm#recipient
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/comm#recipient]
 | JSON name | recipient
 | Requirement Level | Optional
 | Cardinality | 0..*
@@ -196,7 +196,7 @@ Messages are not required for all exchanges. Implementations materialize comm:Me
 [cols="2,4"]
 |===
 | Property | comm:mediaType
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/comm#mediaType
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/comm#mediaType]
 | JSON name | mediaType
 | Requirement Level | Recommended
 | Cardinality | 0..1
@@ -212,7 +212,7 @@ Messages are not required for all exchanges. Implementations materialize comm:Me
 [cols="2,4"]
 |===
 | Property | comm:contentSchema
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/comm#contentSchema
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/comm#contentSchema]
 | JSON name | contentSchema
 | Requirement Level | Recommended
 | Cardinality | 0..*
@@ -228,7 +228,7 @@ Messages are not required for all exchanges. Implementations materialize comm:Me
 [cols="2,4"]
 |===
 | Property | comm:content
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/comm#content
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/comm#content]
 | JSON name | content
 | Requirement Level | Optional
 | Cardinality | 0..1
@@ -244,7 +244,7 @@ Messages are not required for all exchanges. Implementations materialize comm:Me
 [cols="2,4"]
 |===
 | Property | comm:contentHash
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/comm#contentHash
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/comm#contentHash]
 | JSON name | contentHash
 | Requirement Level | Optional
 | Cardinality | 0..1
@@ -260,7 +260,7 @@ Messages are not required for all exchanges. Implementations materialize comm:Me
 [cols="2,4"]
 |===
 | Property | comm:sequenceNumber
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/comm#sequenceNumber
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/comm#sequenceNumber]
 | JSON name | sequenceNumber
 | Requirement Level | Optional
 | Cardinality | 0..1
@@ -276,7 +276,7 @@ Messages are not required for all exchanges. Implementations materialize comm:Me
 [cols="2,4"]
 |===
 | Property | comm:correlatesWith
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/comm#correlatesWith
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/comm#correlatesWith]
 | JSON name | correlatesWith
 | Requirement Level | Optional
 | Cardinality | 0..*

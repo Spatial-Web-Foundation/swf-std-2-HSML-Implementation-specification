@@ -1,7 +1,7 @@
 [[act-atomicactivityschema]]
 === Class: act:AtomicActivitySchema
 
-The class `act:AtomicActivitySchema` realizes the **ATOMIC ACTIVITY SCHEMA** concept, a specialization of `act:ActivitySchema` as defined in IEEE P2874 § 6.6.3.
+The class `act:AtomicActivitySchema` realizes the **ATOMIC ACTIVITY SCHEMA** concept, a specialization of `act:ActivitySchema` as defined in <<ieee-p2874,clause="6.6.3">>.
 
 An `act:AtomicActivitySchema` is a schema for a simple, indivisible activity that is not broken down into smaller steps within the HSML model. It represents a fundamental operation whose internal logic is treated as a "black box."
 

@@ -1,8 +1,9 @@
 == Participants
 
+=== Working group
+
 item:: Stephane Fellah
 item:: George Percivall
 item:: Kurt Cagle
 item:: Scott Carroll
 item:: Christine Perey
-

@@ -1,11 +1,12 @@
 [[gov-norm]]
 === Class: `gov:Norm`
 
-The class `gov:Norm` realizes the **NORM** concept in IEEE P2874 § 6.6.4:  
+The class `gov:Norm` realizes the **NORM** concept in <<ieee-p2874,clause="6.6.4">>:
+
 *“An atomic deontic rule—Obligation, Prohibition, or Permission—governing behavior in a Domain and expressed via one or more evaluable Conditions.”*
 
-A Norm is the **atomic rule unit**: it specifies what modality (obligation, prohibition, permission) applies to which targets, and under which conditions.  
-It does **not** carry issuer, validity, credential gates, or precedence; those are modeled at the `gov:Policy` level.  
+A Norm is the **atomic rule unit**: it specifies what modality (obligation, prohibition, permission) applies to which targets, and under which conditions.
+It does **not** carry issuer, validity, credential gates, or precedence; those are modeled at the `gov:Policy` level.
 Policies must reference one or more Norms via `gov:hasNorm`.
 
 [[gov-norm-class]]
@@ -24,11 +25,11 @@ Policies must reference one or more Norms via `gov:hasNorm`.
 [[gov-norm-key-reqs]]
 ==== Key Requirements (Normative)
 
-. A `gov:Norm` *shall* declare exactly one `gov:modality` (Obligation, Prohibition, Permission).  
-. A `gov:Norm` *shall* specify one or more governed targets via `gov:appliesTo`.  
-. A `gov:Norm` *shall* include one or more `core:hasCondition` that operationalize applicability.  
-. A `gov:Norm` *may* declare enforcement actions via `gov:onViolation`.  
-. A `gov:Norm` *may* include an intra-policy ordering hint via `gov:priority`.  
+. A `gov:Norm` *shall* declare exactly one `gov:modality` (Obligation, Prohibition, Permission).
+. A `gov:Norm` *shall* specify one or more governed targets via `gov:appliesTo`.
+. A `gov:Norm` *shall* include one or more `core:hasCondition` that operationalize applicability.
+. A `gov:Norm` *may* declare enforcement actions via `gov:onViolation`.
+. A `gov:Norm` *may* include an intra-policy ordering hint via `gov:priority`.
 . A `gov:Policy` *shall* reference one or more `gov:Norm` when publishing governance bundles.
 
 [[gov-norm-summary]]
@@ -84,7 +85,7 @@ Policies must reference one or more Norms via `gov:hasNorm`.
 [cols="2,4"]
 |===
 | **Property** | `gov:modality`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/governance#modality`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/governance#modality]
 | **JSON name** | `modality`
 | **Requirement Level** | **Mandatory**
 | **Cardinality** | 1..1

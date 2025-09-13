@@ -1,7 +1,7 @@
 [[agt-agent]]
 === Class: agt:Agent
 
-The class `agt:Agent` realises the **AGENT** concept in IEEE P2874 § 6.6.3:
+The class `agt:Agent` realises the **AGENT** concept in <<ieee-p2874,clause="6.6.3">>:
 
 “An ENTITY that senses, responds, and maintains a model of its environment while performing ACTIVITIES to achieve its goals.”
 
@@ -58,7 +58,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | **Property** | `agt:hasGoal`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/agent#hasGoal`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/agent#hasGoal]
 | **JSON name** | `hasGoal`
 | **Requirement Level** | **Mandatory**
 | **Cardinality** | 1..*
@@ -74,7 +74,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | **Property** | `agt:canPerform`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/agent#canPerform`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/agent#canPerform]
 | **JSON name** | `canPerform`
 | **Requirement Level** | **Mandatory**
 | **Cardinality** | 1..*

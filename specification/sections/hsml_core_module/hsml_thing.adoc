@@ -1,7 +1,7 @@
 [[core-thing]]
 === Class: core:Thing
 
-The class core:Thing realises the THING DOMAIN type defined in IEEE P2874 § 6.3.2.1.7:
+The class core:Thing realises the THING DOMAIN type defined in <<ieee-p2874,clause="6.3.2.1.7">>:
 
 “A THING is a DOMAIN representing a bounded item without agency that can be acted upon, sensed, or described in the Spatial Web.”
 

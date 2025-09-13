@@ -4,7 +4,7 @@
 === Introduction
 
 The CellularSpace Module defines the HSML specialization of Hyperspace for **discrete partitioned structures**.
-It realizes the *CELLULAR SPACE* concept of IEEE P2874 (§ 6.2.1), which states:
+It realizes the *CELLULAR SPACE* concept of <<ieee-p2874,clause="6.2.1">>, which states:
 
 ____
 “A space partitioned into finite, discrete units (cells) such that adjacency between units is explicitly defined

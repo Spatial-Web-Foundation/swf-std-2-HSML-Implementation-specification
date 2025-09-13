@@ -60,7 +60,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 |**Property** | `rdf:type`
-|**IRI** | `http://www.w3.org/1999/02/22-rdf-syntax-ns#type`
+|**IRI** | identifier:[http://www.w3.org/1999/02/22-rdf-syntax-ns#type]
 |**JSON name** | `@type`
 |**Requirement Level** | **Mandatory**
 |**Cardinality** | 1..*
@@ -76,7 +76,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 |**Property** | `schema:name`
-|**IRI** | `https://schema.org/name`
+|**IRI** | identifier:[https://schema.org/name]
 |**JSON name** | `name`
 |**Requirement Level** | Recommended
 |**Cardinality** | 0..1
@@ -92,7 +92,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 |**Property** | `schema:description`
-|**IRI** | `https://schema.org/description`
+|**IRI** | identifier:[https://schema.org/description]
 |**JSON name** | `description`
 |**Requirement Level** | Optional
 |**Cardinality** | 0..1

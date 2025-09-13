@@ -1,7 +1,7 @@
 [[hsml-organization]]
 === Class: hsml:Organization
 
-The class hsml:Organization realises the ORGANIZATION DOMAIN concept in IEEE P2874 § 6.6.3:
+The class hsml:Organization realises the ORGANIZATION DOMAIN concept in <<ieee-p2874,clause="6.6.3">>:
 
 “An ORGANIZATION is a DOMAIN representing a group of Agents operating under shared governance, norms, or objectives within the Spatial Web.”
 
@@ -12,10 +12,10 @@ hsml:Organization represents collective actors—such as companies, institutions
 [[hsml-organization-class]]
 ==== Class Definition
 
-.Class Definition for +hsml:Organization+
+.Class Definition for `hsml:Organization`
 [cols="1,3"]
 |===
-| RDF Class | +hsml:Organization+
+| RDF Class | `hsml:Organization`
 | Is Abstract | No
 | Definition | A collective group comprising Agents and/or Person under common governance, capable of issuing Contracts, Credentials, and norms.
 | Subclass Of | agt:Agent

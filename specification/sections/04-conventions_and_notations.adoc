@@ -13,6 +13,7 @@ HSML is modular: each module (Activity, Agent, Domain, Hyperspace, Policy, etc.)
 This hierarchy ensures that all HSML identifiers are globally unique, discoverable, and traceable to the Spatial Web Foundation.
 Submodules of Hyperspace (e.g., Metric, Topological, Vector, Cellular) extend `hspace:` with their own namespaces.
 
+[[hsml-normative-namespaces]]
 ==== HSML Normative Namespaces
 
 All HSML modules share the common base namespace:
@@ -22,61 +23,92 @@ https://www.spatialwebfoundation.org/ns/hsml
 ----
 
 Each module extends this base by declaring its own sub-namespace.
-Hyperspace modules form a hierarchy: `hyperspace` is the root, and its specializations (metric, topo, vector, cell,...) extend from it.
+Hyperspace modules form a hierarchy: `hyperspace` is the root, and its specializations (`metric`, `topo`, `vector`, `cell`,...) extend from it.
 
 .HSML Normative Namespaces
-[options="header"]
+[cols="a,4a,a",options="header"]
 |===
 |Prefix |Namespace IRI |Module
 
-|core |https://www.spatialwebfoundation.org/ns/hsml/core# |HSML Core
-|agent|https://www.spatialwebfoundation.org/ns/hsml/agent#|Agent Module
-|act |https://www.spatialwebfoundation.org/ns/hsml/activity# |Activity Module
-|gov|https://www.spatialwebfoundation.org/ns/hsml/gov#|Governance Module
-|comm |https://www.spatialwebfoundation.org/ns/hsml/comm# |Communication Module
-|hspace |https://www.spatialwebfoundation.org/ns/hsml/hyperspace# |Hyperspace Core
-|metric |https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#|MetricSpace Submodule
-|topo |https://www.spatialwebfoundation.org/ns/hsml/hyperspace/topo#|TopologicalSpace Submodule
-|vector |https://www.spatialwebfoundation.org/ns/hsml/hyperspace/vector#|VectorSpace Submodule
-|cell |https://www.spatialwebfoundation.org/ns/hsml/hyperspace/cell#|CellularSpace Submodule
+|core | `https://www.spatialwebfoundation.org/ns/hsml/core#`
+|HSML Core
+
+|agent| `https://www.spatialwebfoundation.org/ns/hsml/agent#`
+|Agent Module
+
+|act | `https://www.spatialwebfoundation.org/ns/hsml/activity#`
+|Activity Module
+
+|gov| `https://www.spatialwebfoundation.org/ns/hsml/gov#`
+|Governance Module
+
+|comm | `https://www.spatialwebfoundation.org/ns/hsml/comm#`
+|Communication Module
+
+|hspace | `https://www.spatialwebfoundation.org/ns/hsml/hyperspace#`
+|Hyperspace Core
+
+|metric | `https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#`
+|MetricSpace Submodule
+
+|topo | `https://www.spatialwebfoundation.org/ns/hsml/hyperspace/topo#`
+|TopologicalSpace Submodule
+
+|vector | `https://www.spatialwebfoundation.org/ns/hsml/hyperspace/vector#`
+|VectorSpace Submodule
+
+|cell | `https://www.spatialwebfoundation.org/ns/hsml/hyperspace/cell#`
+|CellularSpace Submodule
+
 |===
 
+[[external-referenced-namespaces]]
 ==== External Referenced Namespaces
 
 .External Referenced Namespaces
-[options="header"]
+[cols="a,4a,a",options="header"]
 |===
 |Prefix |Namespace IRI |Source
 
-|dct|http://purl.org/dc/terms/ |[DCTERMS]
-|foaf |http://xmlns.com/foaf/0.1/|[FOAF]
-|gsp|http://www.opengis.net/ont/geosparql# |[GeoSPARQL]
-|org|http://www.w3.org/ns/org# |[VOCAB-ORG]
-|prov |http://www.w3.org/ns/prov#|[PROV]
-|rdf|http://www.w3.org/1999/02/22-rdf-syntax-ns# |[RDF-SYNTAX-GRAMMAR]
-|rdfs |http://www.w3.org/2000/01/rdf-schema# |[RDF-SCHEMA]
-|schema |http://schema.org/|[schema-org]
-|sh |http://www.w3.org/ns/shacl# |[SHACL]
-|skos |http://www.w3.org/2004/02/skos/core#|[SKOS-REFERENCE]
-|owl|http://www.w3.org/2002/07/owl#|[OWL2]
-|xsd|http://www.w3.org/2001/XMLSchema# |[XMLSCHEMA11-2]
-|vc |https://www.w3.org/2018/credentials#|[VC-DATA-MODEL]
+|`dct` |  identifier:[http://purl.org/dc/terms/] |<<dcterms>>
+|`foaf` | identifier:[http://xmlns.com/foaf/0.1/] |<<xmlns_foaf>>
+|`gsp` |  identifier:[http://www.opengis.net/ont/geosparql#] |<<ogc_geosparql>>
+|`org` |  identifier:[http://www.w3c.org/ns/org#] |<<w3c_vocab-org>>
+|`prov` | identifier:[http://www.w3.org/ns/prov#] |<<w3c_prov-dm>>
+|`rdf` |  identifier:[http://www.w3.org/1999/02/22-rdf-syntax-ns#] |<<w3c_rdf-syntax-grammar>>
+|`rdfs` | identifier:[http://www.w3.org/2000/01/rdf-schema#] |<<w3c_rdf-schema>>
+|`schema` | identifier:[http://schema.org/] |<<schema-org>>
+|`sh` | identifier:[http://www.w3.org/ns/shacl#] |<<w3c_shacl>>
+|`skos` | identifier:[http://www.w3.org/2004/02/skos/core#] |<<w3c_skos>>
+|`owl` |  identifier:[http://www.w3.org/2002/07/owl#] |<<w3c_owl>>
+|`xsd` |  identifier:[http://www.w3.org/2001/XMLSchema#] |<<w3c_xmlschema>>
+|`vc` | identifier:[https://www.w3.org/2018/credentials#] |<<w3c_vc-data-model-20>>
+
 |===
+
 
 === RDF/Turtle Syntax Conventions
 
-RDF examples in this specification use Turtle syntax [TURTLE].
+RDF examples in this specification use Turtle syntax <<w3c_rdf12-turtle>>.
+
 The following conventions apply:
 
-* All examples assume the namespace prefixes defined in <<HSML Normative Namespaces>> and <<External Referenced Namespaces>>.
+* All examples assume the namespace prefixes defined in <<hsml-normative-namespaces>> and <<external-referenced-namespaces>>.
+
 * If a prefix is used in an example but not explicitly declared, it SHALL be interpreted as belonging to one of those normative tables.
-* Example fragments are illustrative and **non-normative** unless explicitly marked as normative.
+
+* Example fragments are illustrative and **non-normative*
+unless explicitly marked as normative.
+
 * Literals use standard `xsd:` datatypes (e.g., `xsd:string`, `xsd:integer`, `xsd:dateTime`).
+
 * Persistent identifiers (e.g., SWIDs) are preferred over blank nodes.
+
 * Compact IRIs (CURIEs) are used when a prefix is declared.
 
-Example:
-
+.Example Turtle syntax
+[example]
+====
 [source,turtle]
 ----
 did:swd:smarthome123:activity:1 a activity:Activity ;
@@ -84,11 +116,12 @@ did:swd:smarthome123:activity:1 a activity:Activity ;
     act:activitySchema :TurnOnLight ;
     act:hasStatus "running"^^xsd:string .
 ----
+====
 
 
 === JSON-LD Syntax Conventions
 
-HSML entities, activities, and governance artifacts shall be serializable into JSON-LD [JSON-LD11].
+HSML entities, activities, and governance artifacts shall be serializable into JSON-LD <<w3c_json-ld11>>.
 
 For the sake of simplicity and consistency, HSML defines a **single canonical JSON-LD context** that covers all modules:
 
@@ -98,17 +131,22 @@ https://www.spatialwebfoundation.org/ns/hsml/context.jsonld
 
 This context performs the following functions:
 
-* Provides prefix mappings for all HSML modules (core, agent, activity, gov, comm, hspace, metric, topo, vector, cell).
+* Provides prefix mappings for all HSML modules (`core`, `agent`, `activity`, `gov`, `comm`, `hspace`, `metric`, `topo`, `vector`, `cell`).
+
 * Maps each HSML **class IRI** and **property IRI** to a simplified JSON key, corresponding to the **“JSON name”** column defined in the normative tables of this specification.
+
 * Enables JSON developers to work with compact, human-readable field names while ensuring full semantic traceability to IRIs.
+
 * Profiles and extensions MAY extend the canonical context with additional mappings.
 
 
 .Example mapping excerpt (informative)
+[example]
+====
 [source,json]
 ----
 {
-"@context": {
+  "@context": {
     "core": "https://www.spatialwebfoundation.org/ns/hsml/core#",
     "act": "https://www.spatialwebfoundation.org/ns/hsml/activity#",
     "agent": "https://www.spatialwebfoundation.org/ns/hsml/agent#",
@@ -126,22 +164,26 @@ This context performs the following functions:
    }
 }
 ----
+====
 
 .Example instance
+[example]
+====
 [source,json]
 ----
 {
-"@context": "https://www.spatialwebfoundation.org/ns/hsml/context.jsonld",
-    "id": "did:swid:smarthome123:activity:1",
-    "@id": "did:swid:smarthome123:activity:1",
-    "@type": "Activity",
-    "swid": "did:swd:smarthome123:activity:1",
-    "activitySchema": "did:swd:smarthome123:schemas:TurnOnLight",
-    "hasStatus": "Ongoing",
-    "name": "Turn on light",
-    "description": "Switches on the living room light"
+  "@context": "https://www.spatialwebfoundation.org/ns/hsml/context.jsonld",
+  "id": "did:swid:smarthome123:activity:1",
+  "@id": "did:swid:smarthome123:activity:1",
+  "@type": "Activity",
+  "swid": "did:swd:smarthome123:activity:1",
+  "activitySchema": "did:swd:smarthome123:schemas:TurnOnLight",
+  "hasStatus": "Ongoing",
+  "name": "Turn on light",
+  "description": "Switches on the living room light"
 }
 ----
+====
 
 
 === SHACL Shape Syntax and Annotations
@@ -156,8 +198,10 @@ The following conventions apply:
 * HSML-specific annotations (e.g., `hsml:parameter`, `hsml:precondition`) may extend SHACL for Activity schemas.
 * Shapes may serve as **Activity payload templates**, validating inputs and outputs.
 
-Example:
 
+.Example SHACL shape
+[example]
+====
 [source,turtle]
 ----
 :TurnOnLightShape a sh:NodeShape ;
@@ -170,3 +214,4 @@ Example:
         sh:maxCount 1 ;
 ] .
 ----
+====

@@ -82,9 +82,9 @@ The logical path forward is not to choose one over the other, but to synthesize 
 
 This is the purpose of **RDF 2.0 with Holon Extensions**. It addresses the limitations of standard RDF by introducing two new constructs:
 
-1.  **The `h:Holon` Primitive:** A formal declaration (`rdf:type h:Holon`) that a resource can act as a container. This directly maps to the Spatial Web `DOMAIN` concept, giving it a concrete, machine-understandable type.
+. **The `h:Holon` Primitive:** A formal declaration (`rdf:type h:Holon`) that a resource can act as a container. This directly maps to the Spatial Web `DOMAIN` concept, giving it a concrete, machine-understandable type.
 
-2.  **The Primitive Containment Relation (`⊂`):** This is the core innovation. Containment is no longer just a predicate represented by an IRI; it is a fundamental part of the data model's structure, like a triple itself. It has built-in, processor-enforced semantics based on mereology: it is **transitive, irreflexive, and acyclic**.
+. **The Primitive Containment Relation (`⊂`):** This is the core innovation. Containment is no longer just a predicate represented by an IRI; it is a fundamental part of the data model's structure, like a triple itself. It has built-in, processor-enforced semantics based on mereology: it is **transitive, irreflexive, and acyclic**.
 
 This extension resolves the issues identified above:
 

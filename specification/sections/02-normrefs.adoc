@@ -1,64 +1,49 @@
+[bibliography]
 == Normative references
 
-The following referenced documents are indispensable for the application of this specification.
-For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document applies.
+* [[[w3c_did-core,W3C did-core]]], Decentralized Identifiers (DIDs) v1.0
 
+* [[[w3c_did-spec-registries,W3C did-spec-registries]]]
 
-[IEEE P2874]
-Draft Standard for Spatial Web Protocol, Architecture, and Governance.
+* [[[w3c_json-ld11,W3C json-ld11]]]
 
+* [[[ieee-p2874,IEEE P2874/D-3.1-2024-06]]], Hyperspace Modeling Language (HSML) Specification
 
-[W3C did-core], Decentralized Identifiers (DIDs) v1.0
+* [[[w3c_rdf11-concepts,W3C REC rdf11-concepts]]]
 
-[W3C did-spec-registries]
+* [[[w3c_rdf12-concepts,W3C WD rdf12-concepts]]]
 
-[W3C json-ld11], A JSON-based Serialization for Linked Data
+* [[[w3c_rdf12-turtle,W3C WD rdf12-turtle]]]
 
-[W3C json-ld11]
-JSON-LD 1.1: A JSON-based Serialization for Linked Data, W3C Recommendation.
+* [[[w3c_rdf12-semantics,W3C WD rdf12-semantics]]]
 
-[W3C RDF11 Concepts]
-RDF 1.1 Concepts and Abstract Syntax, W3C Recommendation.
+* [[[w3c_rdf-star,W3C CR RDF-star]]]
+span:title[RDF-star and SPARQL-star, W3C Candidate Recommendation]
+span:uri.citation[https://w3c.github.io/rdf-star/cg-spec/]
+span:date[2021-12-17]
+span:type[standard]
+span:docid.w3c[W3C CR RDF-star]
 
-[W3C RDF12 Concepts]
-RDF 1.2 Concepts and Abstract Syntax, W3C Working Draft.
+* [[[w3c_owl2-syntax,W3C REC owl2-syntax]]]
 
-[W3C RDF12 Turtle]
-RDF 1.2 Turtle, W3C Working Draft.
+* [[[w3c_shacl,W3C REC SHACL]]]
 
-[W3C RDF12 Semantics]
-RDF 1.2 Semantics, W3C Working Draft.
+* [[[ogc_geosparql,OGC 22-047r1]]]
 
-[W3C RDF-star]
-RDF-star and SPARQL-star, W3C Candidate Recommendation.
+* [[[w3c_vc-data-model-20,W3C REC vc-data-model-2.0]]]
 
-[W3C OWL2]
-OWL 2 Web Ontology Language: Document Overview, W3C Recommendation.
+* [[[w3c_vc-data-integrity-10,W3C REC vc-data-integrity-1.0]]]
 
-[W3C SHACL]
-Shapes Constraint Language (SHACL), W3C Recommendation.
+* [[[w3c_controlled-identifiers-10,W3C REC controlled-identifiers-1.0]]]
 
-[OGC GeoSPARQL 1.1]
-OGC GeoSPARQL – A Geographic Query Language for RDF Data, OGC Standard.
+* [[[w3c_vc-status-list-2021,W3C REC vc-status-list-2021]]]
 
+* [[[w3c_vc-jose-cose,W3C REC vc-jose-cose]]]
 
-[W3C vc-data-model-2.0]
-Verifiable Credentials Data Model v2.0, W3C Recommendation, May 15 2025.
+* [[[w3c_owl-time,W3C REC owl-time]]]
 
-[W3C vc-data-integrity-1.0]
-Verifiable Credential Data Integrity 1.0, W3C Recommendation, May 15 2025.
+* [[[schema_org,Schema.org Core Vocabulary]]]
+span:title[Schema.org Core Vocabulary, Schema.org Community Standard]
+span:uri.citation[https://schema.org/]
+span:organization[Schema.org]
 
-[W3C controlled-identifiers-1.0]
-Controlled Identifiers v1.0, W3C Recommendation, May 15 2025.
-
-[W3C vc-status-list-2021]
-Bitstring Status List v1.0, W3C Recommendation, May 15 2025.
-
-[W3C vc-jose-cose]
-Securing Verifiable Credentials using JOSE and COSE, W3C Recommendation, May 15 2025.
-
-[W3C OWL-Time]
-OWL-Time Ontology, W3C Recommendation.
-
-[schema.org]
-Schema.org Core Vocabulary, Schema.org Community Standard.

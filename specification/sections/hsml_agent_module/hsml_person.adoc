@@ -2,7 +2,7 @@
 [[agt-person]]
 === Class: agt:Person
 
-The class `agt:Person` realises the **PERSON** concept in IEEE P2874 § 6.3.2.1.6, a special subtype of `agt:Agent` that maintains a self-sovereign identity.
+The class `agt:Person` realises the **PERSON** concept in <<ieee-p2874,clause="6.3.2.1.6">>, a special subtype of `agt:Agent` that maintains a self-sovereign identity.
 
 “A person type of Domain refers to entities belonging to the broader agential Domain, but maintaining the capability to control their own Self-Sovereign Identity.”
 
@@ -66,7 +66,7 @@ This section provides the detailed normative definitions for properties commonly
 [cols="2,4"]
 |===
 | **Property** | `schema:givenName`
-| **IRI** | `https://schema.org/givenName`
+| **IRI** | identifier:[https://schema.org/givenName]
 | **JSON name** | `givenName`
 | **Requirement Level** | Recommended
 | **Cardinality** | 0..1
@@ -82,7 +82,7 @@ This section provides the detailed normative definitions for properties commonly
 [cols="2,4"]
 |===
 | **Property** | `schema:familyName`
-| **IRI** | `https://schema.org/familyName`
+| **IRI** | identifier:[https://schema.org/familyName]
 | **JSON name** | `familyName`
 | **Requirement Level** | Recommended
 | **Cardinality** | 0..1
@@ -98,7 +98,7 @@ This section provides the detailed normative definitions for properties commonly
 [cols="2,4"]
 |===
 | **Property** | `schema:email`
-| **IRI** | `https://schema.org/email`
+| **IRI** | identifier:[https://schema.org/email]
 | **JSON name** | `email`
 | **Requirement Level** | Optional
 | **Cardinality** | 0..*

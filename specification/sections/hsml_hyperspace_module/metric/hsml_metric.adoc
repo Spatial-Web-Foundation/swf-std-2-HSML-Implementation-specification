@@ -1,10 +1,10 @@
 [[metric-metric]]
 === Class: metric:Metric
 
-Metrics are the backbone of quantitative reasoning in a Hyperspace.  
+Metrics are the backbone of quantitative reasoning in a Hyperspace.
 They declare *how closeness, likeness, or difference is measured* between elements of a domain, enabling engines to evaluate k-nearest neighbor queries, range filters, clustering, and other operations consistently across heterogeneous data types.
 
-Unlike raw functions, a `metric:Metric` is a **declarative description**: it specifies the polarity (distance vs similarity), expected operand type, optional units and scale, theoretical bounds, and a reference to the computation plan.  
+Unlike raw functions, a `metric:Metric` is a **declarative description**: it specifies the polarity (distance vs similarity), expected operand type, optional units and scale, theoretical bounds, and a reference to the computation plan.
 This separation of *semantics* from *implementation* allows a metric definition to be portable across engines, reproducible across versions, and validatable via SHACL.
 
 Key design principles:
@@ -226,7 +226,7 @@ _Property: `metric:triangleInequality`_
 [cols="2,4"]
 |===
 | Property | metric:kind
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#kind
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#kind]
 
 | Domain | metric:Metric
 | Range | metric:MetricKind
@@ -240,7 +240,7 @@ _Property: `metric:triangleInequality`_
 [cols="2,4"]
 |===
 | Property | metric:polarity
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#polarity
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#polarity]
 
 | Domain | metric:Metric
 | Range | metric:Polarity
@@ -254,7 +254,7 @@ _Property: `metric:triangleInequality`_
 [cols="2,4"]
 |===
 | Property | metric:onType
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#onType
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#onType]
 
 | Domain | metric:Metric
 | Range | rdfs:Class or Datatype (IRI)
@@ -268,7 +268,7 @@ _Property: `metric:triangleInequality`_
 [cols="2,4"]
 |===
 | Property | metric:operandProperty
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#operandProperty
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#operandProperty]
 
 | Domain | metric:Metric
 | Range | rdf:Property (IRI)
@@ -283,7 +283,7 @@ _Property: `metric:triangleInequality`_
 [cols="2,4"]
 |===
 | Property | metric:valueType
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#valueType
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#valueType]
 
 | Domain | metric:Metric
 | Range | rdfs:Datatype
@@ -297,7 +297,7 @@ _Property: `metric:triangleInequality`_
 [cols="2,4"]
 |===
 | Property | metric:unit
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#unit
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#unit]
 
 | Domain | metric:Metric
 | Range | IRI (e.g., QUDT/OM/UCUM)
@@ -311,7 +311,7 @@ _Property: `metric:triangleInequality`_
 [cols="2,4"]
 |===
 | Property | metric:scaleKind
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#scaleKind
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#scaleKind]
 
 | Domain | metric:Metric
 | Range | metric:ScaleKind
@@ -325,7 +325,7 @@ _Property: `metric:triangleInequality`_
 [cols="2,4"]
 |===
 | Property | metric:rangeMin
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#rangeMin
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#rangeMin]
 
 | Domain | metric:Metric
 | Range | xsd:decimal
@@ -339,7 +339,7 @@ _Property: `metric:triangleInequality`_
 [cols="2,4"]
 |===
 | Property | metric:rangeMax
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#rangeMax
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#rangeMax]
 
 | Domain | metric:Metric
 | Range | xsd:decimal
@@ -353,7 +353,7 @@ _Property: `metric:triangleInequality`_
 [cols="2,4"]
 |===
 | Property | metric:function
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#function
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#function]
 
 | Domain | metric:Metric
 | Range | IRI
@@ -367,7 +367,7 @@ _Property: `metric:triangleInequality`_
 [cols="2,4"]
 |===
 | Property | metric:functionVersion
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#functionVersion
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#functionVersion]
 
 | Domain | metric:Metric
 | Range | xsd:string
@@ -381,7 +381,7 @@ _Property: `metric:triangleInequality`_
 [cols="2,4"]
 |===
 | Property | metric:aggregator
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#aggregator
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#aggregator]
 
 | Domain | metric:Metric
 | Range | metric:Aggregator
@@ -395,7 +395,7 @@ _Property: `metric:triangleInequality`_
 [cols="2,4"]
 |===
 | Property | metric:edgeWeightProperty
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#edgeWeightProperty
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#edgeWeightProperty]
 
 | Domain | metric:Metric
 | Range | rdf:Property (IRI)
@@ -409,7 +409,7 @@ _Property: `metric:triangleInequality`_
 [cols="2,4"]
 |===
 | Property | metric:monotoneTransform
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#monotoneTransform
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#monotoneTransform]
 
 | Domain | metric:Metric
 | Range | IRI
@@ -424,7 +424,7 @@ _Property: `metric:triangleInequality`_
 [cols="2,4"]
 |===
 | Property | metric:symmetric
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#symmetric
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#symmetric]
 
 | Domain | metric:Metric
 | Range | xsd:boolean
@@ -438,7 +438,7 @@ _Property: `metric:triangleInequality`_
 [cols="2,4"]
 |===
 | Property | metric:identityOfIndiscernibles
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#identityOfIndiscernibles
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#identityOfIndiscernibles]
 
 | Domain | metric:Metric
 | Range | xsd:boolean
@@ -452,7 +452,7 @@ _Property: `metric:triangleInequality`_
 [cols="2,4"]
 |===
 | Property | metric:triangleInequality
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#triangleInequality
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#triangleInequality]
 
 | Domain | metric:Metric
 | Range | xsd:boolean
@@ -466,7 +466,7 @@ _Property: `metric:triangleInequality`_
 [cols="2,4"]
 |===
 | Property | metric:nonNegative
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#nonNegative
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#nonNegative]
 
 | Domain | metric:Metric
 | Range | xsd:boolean

@@ -1,7 +1,7 @@
 [[gov-contract]]
 === Class: gov:Contract
 
-The class `gov:Contract` realises the **CONTRACT** concept in IEEE P2874 § 6.6.4:  
+The class `gov:Contract` realises the **CONTRACT** concept in <<ieee-p2874,clause="6.6.4">>:
 
 *“A binding agreement between two or more parties—enforceable by law or internal policy—that governs one or more Activities in the Spatial Web.”*
 
@@ -9,11 +9,11 @@ The class `gov:Contract` realises the **CONTRACT** concept in IEEE P2874 § 6.6.
 
 **Key Requirements**
 
-* **Identity** Every Contract **SHALL** possess a Spatial Web Identifier (`hsml:swid`, W3C DID Core-compliant).  
-* **Initiator** Exactly one `hsml:isRequestedBy` **SHALL** reference the *Domain* that issued the request.  
-* **Acceptance** One or more `hsml:isAcceptedBy` references **SHALL** identify the Agent(s) that accept the terms.  
-* **Fulfilment** One or more `hsml:isFulfilledBy` references **SHALL** identify the Agent(s) responsible for execution.  
-* **Governed Activity** One or more `hsml:contractFor` references **SHALL** identify the Activity(ies) the contract governs.  
+* **Identity** Every Contract **SHALL** possess a Spatial Web Identifier (`hsml:swid`, W3C DID Core-compliant).
+* **Initiator** Exactly one `hsml:isRequestedBy` **SHALL** reference the *Domain* that issued the request.
+* **Acceptance** One or more `hsml:isAcceptedBy` references **SHALL** identify the Agent(s) that accept the terms.
+* **Fulfilment** One or more `hsml:isFulfilledBy` references **SHALL** identify the Agent(s) responsible for execution.
+* **Governed Activity** One or more `hsml:contractFor` references **SHALL** identify the Activity(ies) the contract governs.
 * **Lifecycle**  `hsml:contractStatus` references **SHALL** record the contract’s state
 * **Extensibility** Additional clauses, policy links, or monetary terms **MAY** be added via further properties or subclasses without altering these core semantics.
 
@@ -92,7 +92,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | **Property** | `gov:isRequestedBy`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/governance#isRequestedBy`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/governance#isRequestedBy]
 | **JSON name** | `requestedBy`
 | **Requirement Level** | **Mandatory**
 | **Cardinality** | 1..1
@@ -108,7 +108,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | **Property** | `gov:isAcceptedBy`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/governance#isAcceptedBy`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/governance#isAcceptedBy]
 | **JSON name** | `acceptedBy`
 | **Requirement Level** | **Mandatory**
 | **Cardinality** | 1..*
@@ -124,7 +124,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | **Property** | `gov:isFulfilledBy`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/governance#isFulfilledBy`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/governance#isFulfilledBy]
 | **JSON name** | `fulfilledBy`
 | **Requirement Level** | **Mandatory**
 | **Cardinality** | 1..*
@@ -140,7 +140,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | **Property** | `gov:contractFor`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/governance#contractFor`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/governance#contractFor]
 | **JSON name** | `contractFor`
 | **Requirement Level** | **Mandatory**
 | **Cardinality** | 1..*
@@ -156,7 +156,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | **Property** | `gov:contractStatus`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/governance#contractStatus`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/governance#contractStatus]
 | **JSON name** | `contractStatus`
 | **Requirement Level** | **Mandatory**
 | **Cardinality** | 1..1
@@ -172,7 +172,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | **Property** | `gov:hasParticipation`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/governance#hasParticipation`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/governance#hasParticipation]
 | **JSON name** | `hasParticipation`
 | **Requirement Level** | Optional
 | **Cardinality** | 0..*

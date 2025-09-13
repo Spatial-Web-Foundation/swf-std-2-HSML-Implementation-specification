@@ -1,2 +1,52 @@
-[appendix,obligation=informative]
+
+[bibliography]
 == Bibliography
+
+// Standards
+
+// ------------------------------------
+
+// IEEE documents
+
+// ------------------------------------
+
+// W3C documents
+
+// ------------------------------------
+
+
+// * [[[HSML,IEEE P2874/D-3.1-2024-06]]], Hyperspace Modeling Language (HSML) Specification
+
+* [[[w3c_rdf-schema,W3C rdf-schema]]]
+
+* [[[w3c_rdf-syntax-grammar,W3C rdf-syntax-grammar]]]
+
+* [[[w3c_skos,skos-reference]]], Simple Knowledge Organization System (SKOS)
+
+* [[[w3c_owl,W3C owl2-conformance]]], Web Ontology Language (OWL)
+
+* [[[w3c_xmlschema,W3C xmlschema11-1]]], XML Schema Definition (XSD)
+
+* [[[w3c_prov-dm,W3C prov-dm]]], Provenance Data Model (PROV-DM)
+
+* [[[w3c_vocab-org,W3C vocab-org]]], Organization Ontology
+
+* [[[ogc_geosparql,OGC 22-047r1]]], GeoSPARQL
+
+* [[[xmlns_foaf,FOAF]]],
+span:surname[Brickley], span:givenname[Dan]
+span:surname[Miller], span:givenname[Libby]
+span:title[FOAF Vocabulary Specification]
+span:date[2014-01-14]
+span:uri.citation[http://xmlns.com/foaf/spec/]
+
+* [[[dcterms,DCMI Metadata Terms]]],
+span:organization[DCMI]
+span:title[DCMI Metadata Terms]
+span:date[2020-01-20]
+span:uri.citation[https://www.dublincore.org/specifications/dublin-core/dcmi-terms/]
+
+* [[[schema-org,Schema.org]]],
+span:organization[W3C Schema.org Community Group]
+span:title[Schema.org]
+span:uri.citation[http://schema.org/]

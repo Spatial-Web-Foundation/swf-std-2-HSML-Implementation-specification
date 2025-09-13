@@ -1,17 +1,17 @@
 [[comm-channel]]
-=== Class: +comm:Channel+
+=== Class: `comm:Channel`
 
-The +comm:Channel+ class realizes the *CHANNEL* concept as defined in the IEEE P2e874 draft standard. As a central element of the communications (+comm+) module, it provides a contextual container that links participants, data, and messages around specific Activities without forming part of the permanent domain hierarchy. This enables ad-hoc, session-based, or otherwise transient coordination and monitoring.
+The `comm:Channel` class realizes the *CHANNEL* concept as defined in the IEEE P2e874 draft standard. As a central element of the communications (+comm+) module, it provides a contextual container that links participants, data, and messages around specific Activities without forming part of the permanent domain hierarchy. This enables ad-hoc, session-based, or otherwise transient coordination and monitoring.
 
-This class is a subclass of +hsml:Entity+, inheriting a +hsml:swid+ as its unique identifier.
+This class is a subclass of `hsml:Entity`, inheriting a `hsml:swid` as its unique identifier.
 
 
 ==== Key Requirements & Design Principles
 
-* A +comm:Channel+ *shall link* to at least one +hsml:Activity+ it supports.
-* A +comm:Channel+ *shall be disjoint* from +hsml:Domain+, as it represents a non-hierarchical, transient grouping.
-* A +comm:Channel+ *shall include* one or more participants via the +core:hasParticipant+ property.
-* Parent-child relationships between channels *shall be modeled* using the inverse properties +comm:hasSubChannel+ and +comm:subChannelOf+.
+* A `comm:Channel` *shall link* to at least one `hsml:Activity` it supports.
+* A `comm:Channel` *shall be disjoint* from `hsml:Domain`, as it represents a non-hierarchical, transient grouping.
+* A `comm:Channel` *shall include* one or more participants via the `core:hasParticipant` property.
+* Parent-child relationships between channels *shall be modeled* using the inverse properties `comm:hasSubChannel` and `comm:subChannelOf`.
 * Governance and access control *are intentionally delegated* to the Governance Module and are not embedded properties of a Channel.
 
 
@@ -19,14 +19,14 @@ This class is a subclass of +hsml:Entity+, inheriting a +hsml:swid+ as its uniqu
 [[comm-channel-class]]
 ==== Class Definition
 
-.Class Definition for +comm:Channel+
+.Class Definition for `comm:Channel`
 [cols="1,3"]
 |===
-| *RDF Class* | +comm:Channel+
+| *RDF Class* | `comm:Channel`
 | *Is Abstract* | No
 | *Definition* | A contextual, non-hierarchical grouping of entities associated with a specific Activity or purpose, for coordinating transient communications.
-| *Subclass Of* | +hsml:Entity+
-| *Usage Note* | Channels are for transient, ad-hoc collaboration; they do not define domain boundaries or permanent hierarchies. The +core+ namespace refers to a separate module defining foundational, cross-cutting properties.
+| *Subclass Of* | `hsml:Entity`
+| *Usage Note* | Channels are for transient, ad-hoc collaboration; they do not define domain boundaries or permanent hierarchies. The `core` namespace refers to a separate module defining foundational, cross-cutting properties.
 | *Rationale* | Provides a lightweight mechanism for coordinating information and participants. Access control is delegated to the Governance Module; Channels do not embed their own access control lists (ACLs).
 |===
 
@@ -34,17 +34,17 @@ This class is a subclass of +hsml:Entity+, inheriting a +hsml:swid+ as its uniqu
 [[comm-channel-properties-summary]]
 ==== Properties Summary
 
-.Properties Summary for +comm:Channel+
+.Properties Summary for `comm:Channel`
 [cols="1,1,3,1",options="header"]
 |===
 | Predicate | JSON(-LD) Name | Description | Cardinality
 
-| <<property-channel-type,rdf:type>> | +@type+ | Declares the resource as an instance of +comm:Channel+. | 1..n
-| <<property-channel-swid,hsml:swid>> | +swid+ | The Spatial Web Identifier (SWID) inherited from +hsml:Entity+. | 1
-| <<property-channel-hasParticipant,core:hasParticipant>> | +hasParticipant+ | Identifies the entities participating in the Channel. | 1..n
-| <<property-channel-forActivity,comm:forActivity>> | +forActivity+ | Links the Channel to the Activity it supports. | 1..n
-| <<property-channel-hasSubChannel,comm:hasSubChannel>> | +hasSubChannel+ | Links to a nested sub-channel. | 0..n
-| <<property-channel-subChannelOf,comm:subChannelOf>> | +subChannelOf+ | Links to the parent channel. | 0..1
+| <<property-channel-type,rdf:type>> | `@type` | Declares the resource as an instance of `comm:Channel`. | 1..n
+| <<property-channel-swid,hsml:swid>> | `swid` | The Spatial Web Identifier (SWID) inherited from `hsml:Entity`. | 1
+| <<property-channel-hasParticipant,core:hasParticipant>> | `hasParticipant` | Identifies the entities participating in the Channel. | 1..n
+| <<property-channel-forActivity,comm:forActivity>> | `forActivity` | Links the Channel to the Activity it supports. | 1..n
+| <<property-channel-hasSubChannel,comm:hasSubChannel>> | `hasSubChannel` | Links to a nested sub-channel. | 0..n
+| <<property-channel-subChannelOf,comm:subChannelOf>> | `subChannelOf` | Links to the parent channel. | 0..1
 |===
 
 
@@ -52,73 +52,73 @@ This class is a subclass of +hsml:Entity+, inheriting a +hsml:swid+ as its uniqu
 ==== Property Details
 
 [[property-channel-hasParticipant]]
-===== Property: +core:hasParticipant+
+===== Property: `core:hasParticipant`
 
-.Property Definition: +core:hasParticipant+
+.Property Definition: `core:hasParticipant`
 [cols="2,4"]
 |===
-| *Property* | +core:hasParticipant+
-| *IRI* | https://schema.spatialwebfoundation.org/core#hasParticipant
-| *JSON Name* | +hasParticipant+
+| *Property* | `core:hasParticipant`
+| *IRI* | identifier:[https://schema.spatialwebfoundation.org/core#hasParticipant]
+| *JSON Name* | `hasParticipant`
 | *Requirement Level* | Mandatory
 | *Cardinality* | 1..n
-| *Domain* | +comm:Channel+
-| *Range* | +hsml:Entity+
+| *Domain* | `comm:Channel`
+| *Range* | `hsml:Entity`
 | *Definition* | Links the Channel to its participants (Agents, Things, or other Entities).
 | *Usage Note* | A Channel must have at least one participant to be meaningful.
 |===
 
 [[property-channel-forActivity]]
-===== Property: +comm:forActivity+
+===== Property: `comm:forActivity`
 
-.Property Definition: +comm:forActivity+
+.Property Definition: `comm:forActivity`
 [cols="2,4"]
 |===
-| *Property* | +comm:forActivity+
-| *IRI* | https://schema.spatialwebfoundation.org/comm#forActivity
-| *JSON Name* | +forActivity+
+| *Property* | `comm:forActivity`
+| *IRI* | identifier:[https://schema.spatialwebfoundation.org/comm#forActivity]
+| *JSON Name* | `forActivity`
 | *Requirement Level* | Mandatory
 | *Cardinality* | 1..n
-| *Range* | +hsml:Activity+
+| *Range* | `hsml:Activity`
 | *Definition* | Associates the Channel with one or more Activities it supports or relates to.
 | *Usage Note* | Channels provide the necessary communication and data context for their referenced Activities.
 |===
 
 [[property-channel-hasSubChannel]]
-===== Property: +comm:hasSubChannel+
+===== Property: `comm:hasSubChannel`
 
-.Property Definition: +comm:hasSubChannel+
+.Property Definition: `comm:hasSubChannel`
 [cols="2,4"]
 |===
-| *Property* | +comm:hasSubChannel+
-| *IRI* | https://schema.spatialwebfoundation.org/comm#hasSubChannel
-| *JSON Name* | +hasSubChannel+
+| *Property* | `comm:hasSubChannel`
+| *IRI* | identifier:[https://schema.spatialwebfoundation.org/comm#hasSubChannel]
+| *JSON Name* | `hasSubChannel`
 | *Requirement Level* | Optional
 | *Cardinality* | 0..n
-| *Range* | +comm:Channel+
-| *Inverse Property* | +comm:subChannelOf+
+| *Range* | `comm:Channel`
+| *Inverse Property* | `comm:subChannelOf`
 | *Definition* | Links the Channel to its sub-channels for hierarchical structuring of information streams.
 | *Usage Note* | This property enables efficient downward traversal of the Channel hierarchy (from parent to children).
 |===
 
 [[property-channel-subChannelOf]]
-===== Property: +subChannelOf+
+===== Property: `subChannelOf`
 
-.Property Definition: +comm:subChannelOf+
+.Property Definition: `comm:subChannelOf`
 [cols="2,4"]
 |===
-| *Property* | +comm:subChannelOf+
-| *IRI* | https://schema.spatialwebfoundation.org/comm#subChannelOf
-| *JSON Name* | +subChannelOf+
+| *Property* | `comm:subChannelOf`
+| *IRI* | identifier:[https://schema.spatialwebfoundation.org/comm#subChannelOf]
+| *JSON Name* | `subChannelOf`
 | *Requirement Level* | Optional
 | *Cardinality* | 0..1
-| *Range* | +comm:Channel+
-| *Inverse Property* | +comm:hasSubChannel+
+| *Range* | `comm:Channel`
+| *Inverse Property* | `comm:hasSubChannel`
 | *Definition* | Links a sub-channel to its parent Channel.
 | *Usage Note* | This property allows for efficient upward traversal of the Channel hierarchy. The `0..1` cardinality enforces a strict tree structure, preventing a single channel from having multiple parents.
 |===
 
-==== Example 
+==== Example
 
 .Example of a Channel with a Sub-Channel using DIDs
 [source,jsonl]

@@ -145,7 +145,7 @@ The class `gov:Policy` is a governance artifact issued by an authority to **decl
 [cols="2,4"]
 |===
 | **Property** | `schema:description`
-| **IRI** | `https://schema.org/description`
+| **IRI** | identifier:[https://schema.org/description]
 | **JSON name** | `rationale`
 | **Requirement Level** | Optional
 | **Cardinality** | 0..1
@@ -162,7 +162,7 @@ The class `gov:Policy` is a governance artifact issued by an authority to **decl
 [cols="2,4"]
 |===
 | **Property** | `schema:creator`
-| **IRI** | `https://schema.org/creator`
+| **IRI** | identifier:[https://schema.org/creator]
 | **JSON name** | `issuedBy`
 | **Requirement Level** | **Mandatory**
 | **Cardinality** | 1..1
@@ -178,7 +178,7 @@ The class `gov:Policy` is a governance artifact issued by an authority to **decl
 [cols="2,4"]
 |===
 | **Property** | `schema:validFrom`
-| **IRI** | `https://schema.org/validFrom`
+| **IRI** | identifier:[https://schema.org/validFrom]
 | **JSON name** | `validFrom`
 | **Requirement Level** | **Mandatory**
 | **Cardinality** | 1..1
@@ -194,7 +194,7 @@ The class `gov:Policy` is a governance artifact issued by an authority to **decl
 [cols="2,4"]
 |===
 | **Property** | `schema:validThrough`
-| **IRI** | `https://schema.org/validThrough`
+| **IRI** | identifier:[https://schema.org/validThrough]
 | **JSON name** | `validThrough`
 | **Requirement Level** | Recommended
 | **Cardinality** | 0..1
@@ -210,7 +210,7 @@ The class `gov:Policy` is a governance artifact issued by an authority to **decl
 [cols="2,4"]
 |===
 | **Property** | `gov:appliesToActivitySchema`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/governance#appliesToActivitySchema`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/governance#appliesToActivitySchema]
 | **JSON name** | `appliesToActivitySchema`
 | **Requirement Level** | **Mandatory**
 | **Cardinality** | 1..*
@@ -226,7 +226,7 @@ The class `gov:Policy` is a governance artifact issued by an authority to **decl
 [cols="2,4"]
 |===
 | **Property** | `gov:appliesToDomain`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/governance#appliesToDomain`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/governance#appliesToDomain]
 | **JSON name** | `appliesToDomain`
 | **Requirement Level** | Optional
 | **Cardinality** | 0..*
@@ -242,7 +242,7 @@ The class `gov:Policy` is a governance artifact issued by an authority to **decl
 [cols="2,4"]
 |===
 | **Property** | `gov:appliesToActorClass`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/governance#appliesToActorClass`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/governance#appliesToActorClass]
 | **JSON name** | `appliesToActorClass`
 | **Requirement Level** | Optional
 | **Cardinality** | 0..*
@@ -258,7 +258,7 @@ The class `gov:Policy` is a governance artifact issued by an authority to **decl
 [cols="2,4"]
 |===
 | **Property** | `gov:hasNorm`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/governance#hasNorm`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/governance#hasNorm]
 | **JSON name** | `hasNorm`
 | **Requirement Level** | **Mandatory**
 | **Cardinality** | 1..*
@@ -274,7 +274,7 @@ The class `gov:Policy` is a governance artifact issued by an authority to **decl
 [cols="2,4"]
 |===
 | **Property** | `core:hasCondition`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/core#hasCondition`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/core#hasCondition]
 | **JSON name** | `hasCondition`
 | **Requirement Level** | Optional
 | **Cardinality** | 0..*
@@ -290,7 +290,7 @@ The class `gov:Policy` is a governance artifact issued by an authority to **decl
 [cols="2,4"]
 |===
 | **Property** | `gov:hasCredentialRequirement`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/governance#hasCredentialRequirement`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/governance#hasCredentialRequirement]
 | **JSON name** | `hasCredentialRequirement`
 | **Requirement Level** | Optional
 | **Cardinality** | 0..*
@@ -306,7 +306,7 @@ The class `gov:Policy` is a governance artifact issued by an authority to **decl
 [cols="2,4"]
 |===
 | **Property** | `gov:precedence`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/governance#precedence`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/governance#precedence]
 | **JSON name** | `precedence`
 | **Requirement Level** | Optional
 | **Cardinality** | 0..1
@@ -322,7 +322,7 @@ The class `gov:Policy` is a governance artifact issued by an authority to **decl
 [cols="2,4"]
 |===
 | **Property** | `gov:policyStatus`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/governance#policyStatus`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/governance#policyStatus]
 | **JSON name** | `policyStatus`
 | **Requirement Level** | Optional
 | **Cardinality** | 0..1
@@ -338,7 +338,7 @@ The class `gov:Policy` is a governance artifact issued by an authority to **decl
 [cols="2,4"]
 |===
 | **Property** | `schema:version`
-| **IRI** | `https://schema.org/version`
+| **IRI** | identifier:[https://schema.org/version]
 | **JSON name** | `version`
 | **Requirement Level** | Optional
 | **Cardinality** | 0..1
@@ -354,7 +354,7 @@ The class `gov:Policy` is a governance artifact issued by an authority to **decl
 [cols="2,4"]
 |===
 | **Property** | `schema:spatialCoverage`
-| **IRI** | `https://schema.org/spatialCoverage`
+| **IRI** | identifier:[https://schema.org/spatialCoverage]
 | **JSON name** | `jurisdiction`
 | **Requirement Level** | Optional
 | **Cardinality** | 0..*
@@ -370,7 +370,7 @@ The class `gov:Policy` is a governance artifact issued by an authority to **decl
 [cols="2,4"]
 |===
 | **Property** | `gov:relatedPolicy`
-| **IRI** | `https://www.spatialwebfoundation.org/ns/hsml/governance#relatedPolicy`
+| **IRI** | identifier:[https://www.spatialwebfoundation.org/ns/hsml/governance#relatedPolicy]
 | **JSON name** | `relatedPolicy`
 | **Requirement Level** | Optional
 | **Cardinality** | 0..*

@@ -1,73 +1,95 @@
-== Terms
+== Terms, definitions and abbreviated terms
 
-=== Definitions
+// NOTE: No change to boilerplate is allowed.
+// Only the most HSML-specific terms, or terms fundamental to the core semantic structure and payload content, are defined here.
 
-Only the most HSML-specific terms, or terms fundamental to the core semantic structure and payload content, are defined here.
+=== Terms and definitions
 
-Activity::
+==== Activity
+
 A temporally-extended process defined by a set of changes an `hsml:Agent` can effect.
+
 An *Activity Schema* provides a template with conditions, parameters, and variables.
+
 An *Activity* (instance) is the execution of such a schema. Activities are central to entity-to-entity execution and state change and may be composed of other Activities.
+
 In HSML, Activity Schemas are expressed in RDF/OWL/SHACL for validation and reasoning.
 
-Agent::
+==== Agent
+
 An `hsml:Entity` that senses and responds to its environment, maintains a model of that environment, and performs Activities to achieve goals. Agents communicate using Spatial Web protocols.
 
-Channel::
+==== Channel
+
 A Spatial Web entity (`hsml:Channel`) that groups a stream of HSML entities related to an Activity in a specific context that does not itself warrant a Domain or hierarchy. Channels support ad-hoc coordination, limited-scope data exchange, and contextual search.
 
-Contract::
+==== Contract
+
 Represents contractual agreements governing transactions. A Contract typically specifies obligations, rights, and conditions for the performance of an HSML Activity. Contracts can be linked to negotiation or execution phases across multiple Domains.
 
-Credential::
+==== Credential
+
 Represents verifiable claims about an Entity. HSML adopts the W3C Verifiable Credentials model for authentication, authorization, and trust verification. Credentials are used to validate access to protected entities, activities, or domains.
 
-Domain::
+==== Domain
+
 A central element of the Spatial Web representing any Entity with a persistent identity. Domains are identified by Spatial Web Identifiers (SWIDs). Domains provide a conceptual area to describe reality, declare hyperspaces, and establish rules of interaction. Relationships between Domains are managed in the Universal Domain Graph (UDG).
 
-Domain Authority::
+==== Domain Authority
+
 A governing authority responsible for the lifecycle and trust model of a Domain, including resolution of its SWID Document and validation of credentials associated with the Domain.
 
-Entity::
+==== Entity
+
 The base class for all Spatial Web entities (`hsml:Entity`). Entities with persistent identity are modeled as Domains. All Entities must have an associated SWID.
 
-Holon::
+==== Holon
+
 A recursive unit of organization within the Spatial Web that is simultaneously a *whole* and a *part*.
 
-Hyperspace::
+==== Hyperspace
+
 A generalized concept of space, fundamental to the Spatial Web. HSML defines abstract classes for specialized hyperspaces (e.g., TopologicalSpace, MetricSpace, VectorSpace, CellularSpace) that specify relationships among elements of a Domain.
 
-MetricSpace::
+==== MetricSpace
+
 A specialization of Hyperspace (`metric:MetricSpace`) where relationships between elements are determined by a defined metric (distance or similarity function).
 A MetricSpace declares one or more metrics (e.g., Euclidean distance, cosine similarity) that quantify how "close" or "similar" its elements are.
 MetricSpaces support quantitative operations such as nearest-neighbor search, clustering, threshold filtering, and path cost evaluation.
 They separate structural representation (the Hyperspace itself) from the semantics of measurement (metrics), enabling consistent and portable evaluation across implementations.
 
-Policy::
+==== Policy
+
 A set of constraints or rules governing the behavior of Entities, Domains, and Activities.
 Defined in IEEE P2874 §6.6.7, Policies specify permissions, prohibitions, or obligations, expressed declaratively (e.g., SHACL, OWL, SPARQL).
 
-Norm::
+==== Norm
+
 A socially or organizationally defined expectation governing behavior within a Domain or Activity.
 Defined in IEEE P2874, Norms complement Policies by specifying conventions, standards, or best practices that guide interactions among Entities.
 
-SWID::
+==== SWID
+
 *Spatial Web Identifier.* A unique identifier for a Domain. SWIDs conform to the W3C Decentralized Identifier (DID) Core specification. Each SWID resolves to a SWID Document describing endpoints, credentials, and governance.
 
-Time::
+==== Time
+
 Represents temporal aspects within the Spatial Web. Time can be attached to Entities, Activities, or Hyperspaces, and is aligned with OWL-Time for temporal reasoning.
 
-TopologicalSpace::
+==== TopologicalSpace
+
 A specialization of Hyperspace (`topo:TopologicalSpace`) where relationships are defined by **adjacency, neighborhoods, and continuity**, independent of numeric distance.
 TopologicalSpaces describe how elements are connected (e.g., graph structures, cellular complexes, networks) and which subsets are considered “open.”
 They enable reasoning about connectivity, boundaries, regions, and continuity, making them suitable for domains such as graphs, GIS geometries, cellular automata, and process flows.
 HSML allows both standard classes (e.g., Region, Boundary) and custom topology definitions by extending the TopologicalSpace model.
 
 
-UDG (Universal Domain Graph)::
+==== UDG (Universal Domain Graph)
+
 A distributed metagraph containing relationships between all known Domains and Entities in the Spatial Web. The UDG provides routing, discovery, and contextual metadata.
 
-UDG Context::
+==== UDG Context
+
 Metadata about a Domain’s position in the UDG, including its SWID, known neighbor SWIDs, and spatial or routing hints.
 
 [NOTE]
@@ -77,21 +99,24 @@ This section is under development and will be expanded in future drafts.
 ====
 
 
-=== Acronyms and Abbreviations
+=== Abbreviated terms
 
-DID:: Decentralized Identifier (referenced in SWID definition)
-HSML:: Hyperspace Modeling Language
+// TODO: Terms that are already defined in the document or normative references
+// should not be redefined here.
+
+DID:: Decentralized Identifier
+// HSML:: Hyperspace Modeling Language
 HSTP:: Hyperspace Transaction Protocol
 HTTP:: Hypertext Transfer Protocol
-IETF:: Internet Engineering Task Force
-JSON-LD:: JSON for Linking Data
+// IETF:: Internet Engineering Task Force
+JSON-LD:: JSON for Linked Data
 OWL:: Web Ontology Language
-PDR:: Preliminary Design Review (spec development phase)
-RFC:: Request for Comments
+// PDR:: Preliminary Design Review (spec development phase)
+// RFC:: Request for Comments
 SHACL:: Shapes Constraint Language
 SPARQL:: SPARQL Protocol and RDF Query Language
-SWF:: Spatial Web Foundation
+// SWF:: Spatial Web Foundation
 SWID:: Spatial Web Identifier
 UDG:: Universal Domain Graph
 VC:: Verifiable Credential
-W3C:: World Wide Web Consortium
+// W3C:: World Wide Web Consortium

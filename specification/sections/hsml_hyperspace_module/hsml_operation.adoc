@@ -1,7 +1,7 @@
 [[hspace-operation]]
 === Class: hspace:Operation
 
-The class +hspace:Operation+ declares a **portable operation** that can be applied to a given Hyperspace
+The class `hspace:Operation` declares a **portable operation** that can be applied to a given Hyperspace
 (e.g., reachability, shortest path, similarity routing, subspace formation). An Operation binds to the
 Hyperspace’s declared mappings (element/arrow/path) so that different implementations can interoperate
 while using the same inputs and producing comparable outputs.
@@ -9,26 +9,26 @@ while using the same inputs and producing comparable outputs.
 [[hspace-operation-class]]
 ==== Class Definition
 
-.Class Definition for +hspace:Operation+
+.Class Definition for `hspace:Operation`
 [cols="1,3"]
 |===
-| RDF Class | +hspace:Operation+
+| RDF Class | `hspace:Operation`
 | Is Abstract | No
 | Definition | A declarative, reusable operation over a Hyperspace that references the mappings it consumes and the types it produces.
 | Subclass Of | hspace:Entity
-| Usage Note | A Hyperspace links to its supported operations with +hspace:hasOperation+. An Operation MAY be reused by multiple Hyperspaces if their mappings are compatible.
+| Usage Note | A Hyperspace links to its supported operations with `hspace:hasOperation`. An Operation MAY be reused by multiple Hyperspaces if their mappings are compatible.
 | Rationale | Separates *what* to compute from *how* the Hyperspace is encoded, enabling consistent contracts for queries, analytics, validation, and services.
 |===
 
 [[hspace-operation-properties-summary]]
 ==== Properties Summary
 
-.Property Definitions for +hspace:Operation+
+.Property Definitions for `hspace:Operation`
 [cols="1,1,3,1",options="header"]
 |===
 | Predicate | JSON(-LD) name | Description | Cardinality
 
-| <<property-operation-type,rdf:type>> | @type | Declares the resource as an instance of +hspace:Operation+. | 1..n
+| <<property-operation-type,rdf:type>> | @type | Declares the resource as an instance of `hspace:Operation`. | 1..n
 
 | <<property-operation-usesArrowProperty,hspace:usesArrowProperty>> | usesArrowProperty
 | Binds the operation to the **atomic edge predicate** it traverses (when arrows are direct triples).
@@ -47,7 +47,7 @@ while using the same inputs and producing comparable outputs.
 | 0..1
 
 | <<property-operation-returnsValueType,hspace:returnsValueType>> | returnsValueType
-| Declares the **datatype or class** of the scalar/complex result (e.g., +xsd:boolean+, +xsd:decimal+, +prov:Entity+).
+| Declares the **datatype or class** of the scalar/complex result (e.g., `xsd:boolean`, `xsd:decimal`, `prov:Entity`).
 | 0..n
 
 | <<property-operation-parameterShape,hspace:parameterShape>> | parameterShape
@@ -55,7 +55,7 @@ while using the same inputs and producing comparable outputs.
 | 0..1
 
 | <<property-operation-implementation,hspace:implementation>> | implementation
-| IRI of an **algorithm, function, or service** (e.g., +prov:Plan+, API endpoint) that realizes this operation.
+| IRI of an **algorithm, function, or service** (e.g., `prov:Plan`, API endpoint) that realizes this operation.
 | 0..n
 |===
 
@@ -71,7 +71,7 @@ while using the same inputs and producing comparable outputs.
 | Cardinality | 1..n
 | Domain | hspace:Operation
 | Range | hspace:Operation
-| Definition | Declares the resource as an instance of +hspace:Operation+.
+| Definition | Declares the resource as an instance of `hspace:Operation`.
 |===
 
 [[property-operation-usesArrowProperty]]
@@ -80,14 +80,14 @@ while using the same inputs and producing comparable outputs.
 [cols="2,4"]
 |===
 | Property | hspace:usesArrowProperty
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#usesArrowProperty
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#usesArrowProperty]
 | JSON name | usesArrowProperty
 | Requirement Level | Optional
 | Cardinality | 0..1
 | Domain | hspace:Operation
 | Range | owl:ObjectProperty IRI
-| Definition | Binds the operation to the arrow **predicate** to traverse (e.g., +ex:connect+).
-| Usage Note | Use this when the Hyperspace uses direct RDF edges (+hspace:arrowProperty+). Mutually exclusive with +hspace:usesArrowClass+ in a single invocation context.
+| Definition | Binds the operation to the arrow **predicate** to traverse (e.g., `ex:connect`).
+| Usage Note | Use this when the Hyperspace uses direct RDF edges (+hspace:arrowProperty+). Mutually exclusive with `hspace:usesArrowClass` in a single invocation context.
 |===
 
 [[property-operation-usesArrowClass]]
@@ -96,14 +96,14 @@ while using the same inputs and producing comparable outputs.
 [cols="2,4"]
 |===
 | Property | hspace:usesArrowClass
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#usesArrowClass
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#usesArrowClass]
 | JSON name | usesArrowClass
 | Requirement Level | Optional
 | Cardinality | 0..1
 | Domain | hspace:Operation
 | Range | rdfs:Class
-| Definition | Binds the operation to the **edge class** to traverse (reified edges, e.g., +ex:Edge+).
-| Usage Note | Pair with endpoint properties defined in the profile (e.g., +hspace:arrowSource+ / +hspace:arrowTarget+ or their literal variants at execution time).
+| Definition | Binds the operation to the **edge class** to traverse (reified edges, e.g., `ex:Edge`).
+| Usage Note | Pair with endpoint properties defined in the profile (e.g., `hspace:arrowSource` / `hspace:arrowTarget` or their literal variants at execution time).
 |===
 
 [[property-operation-usesAnnotationProperty]]
@@ -113,14 +113,14 @@ while using the same inputs and producing comparable outputs.
 [cols="2,4"]
 |===
 | Property | hspace:usesAnnotationProperty
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#usesAnnotationProperty
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#usesAnnotationProperty]
 | JSON name | usesAnnotationProperty
 | Requirement Level | Optional
 | Cardinality | 0..n
 | Domain | hspace:Operation
 | Range | rdf:Property IRI
-| Definition | Declares which **edge annotations** the operation reads (e.g., +ex:weight+, +ex:capacity+, +rdfs:label+).
-| Usage Note | For shortest path, bind the weight property; for multi-criteria, list multiple properties and constrain via +hspace:parameterShape+.
+| Definition | Declares which **edge annotations** the operation reads (e.g., `ex:weight`, `ex:capacity`, `rdfs:label`).
+| Usage Note | For shortest path, bind the weight property; for multi-criteria, list multiple properties and constrain via `hspace:parameterShape`.
 |===
 
 [[property-operation-returnsPathClass]]
@@ -130,14 +130,14 @@ while using the same inputs and producing comparable outputs.
 [cols="2,4"]
 |===
 | Property | hspace:returnsPathClass
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#returnsPathClass
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#returnsPathClass]
 | JSON name | returnsPathClass
 | Requirement Level | Optional
 | Cardinality | 0..1
 | Domain | hspace:Operation
 | Range | rdfs:Class
-| Definition | Declares the path **class** produced by the operation when it returns explicit paths (e.g., +ex:Route+, +vector:LineString+).
-| Usage Note | If omitted, the operation likely produces a scalar or set (see +hspace:returnsValueType+).
+| Definition | Declares the path **class** produced by the operation when it returns explicit paths (e.g., `ex:Route`, `vector:LineString`).
+| Usage Note | If omitted, the operation likely produces a scalar or set (see `hspace:returnsValueType`).
 |===
 
 [[property-operation-returnsValueType]]
@@ -147,13 +147,13 @@ while using the same inputs and producing comparable outputs.
 [cols="2,4"]
 |===
 | Property | hspace:returnsValueType
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#returnsValueType
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#returnsValueType]
 | JSON name | returnsValueType
 | Requirement Level | Optional
 | Cardinality | 0..n
 | Domain | hspace:Operation
 | Range | rdfs:Class or datatype IRI
-| Definition | Declares the non-path **result type(s)** (e.g., +xsd:boolean+ for reachability, +xsd:decimal+ for distance, +prov:Entity+ for artifacts).
+| Definition | Declares the non-path **result type(s)** (e.g., `xsd:boolean` for reachability, `xsd:decimal` for distance, `prov:Entity` for artifacts).
 |===
 
 [[property-operation-parameterShape]]
@@ -163,13 +163,13 @@ while using the same inputs and producing comparable outputs.
 [cols="2,4"]
 |===
 | Property | hspace:parameterShape
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#parameterShape
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#parameterShape]
 | JSON name | parameterShape
 | Requirement Level | Optional
 | Cardinality | 0..1
 | Domain | hspace:Operation
 | Range | sh:NodeShape
-| Definition | SHACL shape describing required/optional **parameters** (e.g., +ex:source+, +ex:target+, +ex:k+, +ex:maxCost+), their datatypes, and constraints.
+| Definition | SHACL shape describing required/optional **parameters** (e.g., `ex:source`, `ex:target`, `ex:k`, `ex:maxCost`), their datatypes, and constraints.
 | Usage Note | Encourages portable invocation contracts across engines.
 |===
 
@@ -180,23 +180,23 @@ while using the same inputs and producing comparable outputs.
 [cols="2,4"]
 |===
 | Property | hspace:implementation
-| IRI | https://www.spatialwebfoundation.org/ns/hsml/hyperspace#implementation
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#implementation]
 | JSON name | implementation
 | Requirement Level | Optional
 | Cardinality | 0..n
 | Domain | hspace:Operation
-| Range | IRI (e.g., +prov:Plan+, code/package/service endpoint)
+| Range | IRI (e.g., `prov:Plan`, code/package/service endpoint)
 | Definition | Identifies an algorithm, plan, or service that realizes the operation.
-| Usage Note | Use +prov:wasAssociatedWith+ / +prov:used+ alongside this property for full provenance, if desired.
+| Usage Note | Use `prov:wasAssociatedWith` / `prov:used` alongside this property for full provenance, if desired.
 |===
 
 [NOTE]
 ====
-**Binding model.** A Hyperspace links to operations via +hspace:hasOperation+. Each operation declares how it binds to the Hyperspace’s mappings:
-- **Direct edges** → +hspace:usesArrowProperty+.
-- **Reified edges** → +hspace:usesArrowClass+ (and profile-known source/target predicates).
-- **Weights/labels** → +hspace:usesAnnotationProperty+.
-Outputs are described by +hspace:returnsPathClass+ and/or +hspace:returnsValueType+. Parameters are validated by +hspace:parameterShape+.
+**Binding model.** A Hyperspace links to operations via `hspace:hasOperation`. Each operation declares how it binds to the Hyperspace’s mappings:
+- **Direct edges** → `hspace:usesArrowProperty`.
+- **Reified edges** → `hspace:usesArrowClass` (and profile-known source/target predicates).
+- **Weights/labels** → `hspace:usesAnnotationProperty`.
+Outputs are described by `hspace:returnsPathClass` and/or `hspace:returnsValueType`. Parameters are validated by `hspace:parameterShape`.
 ====
 
 ==== Minimal Example (Informative)

@@ -1,7 +1,7 @@
 [[hspace-hyperspace-of-hyperspace]]
 === Class: hspace:HyperspaceOfHyperspace
 
-+hspace:HyperspaceOfHyperspace+ is a **higher-order Hyperspace** whose **elements are themselves Hyperspaces**.
+`hspace:HyperspaceOfHyperspace` is a **higher-order Hyperspace** whose **elements are themselves Hyperspaces**.
 It enables composition, federation, and holarchic organization of spaces (systems-of-systems), allowing navigation
 and operations to traverse relationships among multiple constituent Hyperspaces without collapsing their internal structure.
 
@@ -11,9 +11,9 @@ and operations to traverse relationships among multiple constituent Hyperspaces 
 .Class Definition for hspace:HyperspaceOfHyperspace
 [cols="1,3"]
 |===
-| RDF Class | +hspace:HyperspaceOfHyperspace+
+| RDF Class | `hspace:HyperspaceOfHyperspace`
 | Is Abstract | No
-| Definition | A Hyperspace whose element type is +hspace:Hyperspace+, supporting relations and composed paths among Hyperspaces (e.g., containment, interoperability, federation).
+| Definition | A Hyperspace whose element type is `hspace:Hyperspace`, supporting relations and composed paths among Hyperspaces (e.g., containment, interoperability, federation).
 | Subclass Of | hspace:Hyperspace
 | Usage Note | Use when modeling networks or hierarchies of Hyperspaces (e.g., regional grids aggregated into a national grid; organizational spaces federated into a sector space). Internal structures of member Hyperspaces remain intact and navigable via their own declarations.
 | Rationale | Provides a principled way to build **holarchies** and **federations** in the Spatial Web: spaces as elements of larger spaces, with clear separation of concerns and reusable navigation semantics.
@@ -22,28 +22,28 @@ and operations to traverse relationships among multiple constituent Hyperspaces 
 [[hspace-hyperspace-of-hyperspace-constraints]]
 ==== Specialization Constraints (Normative)
 
-* **Element Type.** +hspace:hasElementType+ **MUST** be +hspace:Hyperspace+.
-* **Arrow Type.** +hspace:hasArrowType+ **MAY** denote relations **between Hyperspaces** (e.g., interoperability, containment, dependency).  
-  The specific predicate (if using direct edges) is given by +hspace:arrowProperty+; if using reified edges, profiles SHALL provide the edge class and endpoint predicates.
-* **Path Type.** +hspace:hasPathType+ **MAY** be declared to represent composed relations across multiple Hyperspaces (e.g., federation traversal).  
-  Path instances (if used) employ the standard **Path-class properties** (+hspace:startsAt+, +hspace:endsAt+, +hspace:pathStep+, etc.).
+* **Element Type.** `hspace:hasElementType` **MUST** be `hspace:Hyperspace`.
+* **Arrow Type.** `hspace:hasArrowType` **MAY** denote relations **between Hyperspaces** (e.g., interoperability, containment, dependency).
+  The specific predicate (if using direct edges) is given by `hspace:arrowProperty`; if using reified edges, profiles SHALL provide the edge class and endpoint predicates.
+* **Path Type.** `hspace:hasPathType` **MAY** be declared to represent composed relations across multiple Hyperspaces (e.g., federation traversal).
+  Path instances (if used) employ the standard **Path-class properties** (+hspace:startsAt+, `hspace:endsAt`, `hspace:pathStep`, etc.).
 
 [NOTE]
 ====
-This class **reuses the same Hyperspace-level, Element-class, and Path-class property model** defined for +hspace:Hyperspace+.  
+This class **reuses the same Hyperspace-level, Element-class, and Path-class property model** defined for `hspace:Hyperspace`.
 The only additional constraint is that **elements are Hyperspaces**. Consequently, any path over this space is a chain of Hyperspaces, and any arrow relates one Hyperspace to another.
 ====
 
 [[example-holarchy]]
 ==== Example: Holarchy (Hyperspace of Hyperspaces)
 
-This example models a **higher-order Hyperspace** whose **elements are themselves Hyperspaces** (holons).  
+This example models a **higher-order Hyperspace** whose **elements are themselves Hyperspaces** (holons).
 It preserves each member Hyperspace’s internal logic while expressing **whole–part** links across scales.
 
 * **What is modeled.** `ex:Holarchy` contains `ex:RoomSpace`, `ex:BuildingSpace`, `ex:DistrictSpace`, `ex:CitySpace`—each a `hspace:Hyperspace`.
-* **Arrow semantics.** `ex:containsHolon` is the **atomic arrow** (one step) relating Hyperspace → Hyperspace (Room → Building → District → City).  
+* **Arrow semantics.** `ex:containsHolon` is the **atomic arrow** (one step) relating Hyperspace → Hyperspace (Room → Building → District → City).
   Connectivity across levels is computed by arrow composition, e.g., `(ex:containsHolon)+`.
-* **Explicit path (optional).** `hspace:Path` records a composed traversal (with identity and lightweight metadata).  
+* **Explicit path (optional).** `hspace:Path` records a composed traversal (with identity and lightweight metadata).
   It **complements** arrow-based navigation; arrows remain authoritative for reachability.
 
 [NOTE]

@@ -1,7 +1,7 @@
 [[core-concept]]
 === Class: core:Concept
 
-The class core:Concept realises the CONCEPT DOMAIN type as described in IEEE P2874 § 6.3.2.1.3:
+The class core:Concept realises the CONCEPT DOMAIN type as described in <<ieee-p2874,clause="6.3.2.1.3">>:
 
 “A CONCEPT is a DOMAIN representing an abstract, non-physical entity or idea that provides semantic context or categorization for other Entities in the Spatial Web.”
 
