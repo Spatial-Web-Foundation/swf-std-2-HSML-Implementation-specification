@@ -2,8 +2,17 @@
 
 === Working group
 
-item:: Stephane Fellah
-item:: George Percivall
-item:: Kurt Cagle
-item:: Scott Carroll
-item:: Christine Perey
+Participants of the working group include:
+
+* Stephane Fellah
+* George Percivall
+* Kurt Cagle
+* Scott Carroll
+* Christine Perey
+
+// TODO: Re-enable when https://github.com/metanorma/metanorma-taste/issues/35 is fixed
+// item:: Stephane Fellah
+// item:: George Percivall
+// item:: Kurt Cagle
+// item:: Scott Carroll
+// item:: Christine Perey
