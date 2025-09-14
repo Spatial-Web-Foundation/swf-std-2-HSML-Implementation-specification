@@ -14,9 +14,6 @@
 
 // ------------------------------------
 
-
-// * [[[HSML,IEEE P2874/D-3.1-2024-06]]], Hyperspace Modeling Language (HSML) Specification
-
 * [[[w3c_rdf-schema,W3C rdf-schema]]]
 
 * [[[w3c_rdf-syntax-grammar,W3C rdf-syntax-grammar]]]
