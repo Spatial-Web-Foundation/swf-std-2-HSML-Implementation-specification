@@ -43,7 +43,9 @@ Standard RDF reification (using `rdf:Statement`, `rdf:subject`, `rdf:predicate`,
 ** **Enforce Internal Governance:** If a `BuildingDomain` is a holon within a `CityDomain`, its internal operations might have specific rules. RDF alone doesn't provide direct support for these encapsulated rule sets.
 
 * *Focus on Specific Domains, Not Universal Interoperability:* Many existing standards are highly optimized for specific domains (e.g., geographic information systems, IoT device models). While they provide excellent local solutions, they often struggle to achieve universal interoperability and semantic compatibility across vastly different domains, especially when considering non-physical dimensions or abstract concepts. The Spatial Web's requirement for a "universal domain graph" and its extension of "geography to hyperspace" highlights this gap.
+
 * *Governance and Identity Models Not Inherently Integrated:* Existing graph standards often separate the data model from governance, identity, and access control mechanisms. The Spatial Web, however, integrates concepts like Domain Authorities, verifiable credentials, and self-sovereign identity directly into its core design, influencing how entities interact and how data is accessed and managed within Domains. This deep integration of governance, especially polycentric governance, with the data model is not an out-of-the-box feature of many current graph standards.
+
 * *Dynamic and Adaptive Relationships:* The Spatial Web acknowledges that relationships can be dynamic and adaptive. While graph databases can update relationships, the formalisms to reason about _changes_ in relationships or to model adaptive systems at an ontological level are more aligned with advanced semantic web capabilities.
 
 **How Extensions and Concepts Address These Gaps:**
