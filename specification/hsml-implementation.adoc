@@ -1,4 +1,4 @@
-= SWF-2 Version 0.2
+= HSML Implementation
 :title-intro-en: Spatial Web Implementation
 :title-main-en: HSML Implementation
 :docnumber: 2
@@ -11,7 +11,7 @@
 :committee: HSML
 :committee-type: technical
 :mn-document-class: swf
-:mn-output-extensions: xml,html,doc,pdf,rxl
+:mn-output-extensions: xml,html,pdf,rxl
 :doctype: standard
 :status: published
 :docidentifier: SWF 2:2025 (0.2.0)
