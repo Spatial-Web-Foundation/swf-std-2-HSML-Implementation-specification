@@ -1,7 +1,7 @@
 [[act-activityschema]]
 === Class: `act:ActivitySchema`
 
-The class `act:ActivitySchema` realises the ACTIVITY SCHEMA concept defined in <<HSML,clause="6.6.3">>:
+The class `act:ActivitySchema` realises the ACTIVITY SCHEMA concept defined in <<ieee-p2874,clause="6.6.3">>:
 
 [quote]
 ____

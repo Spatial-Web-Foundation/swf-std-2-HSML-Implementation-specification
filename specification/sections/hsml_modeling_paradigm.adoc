@@ -52,7 +52,7 @@ Standard RDF reification (using `rdf:Statement`, `rdf:subject`, `rdf:predicate`,
 
 * **RDF-star (RDF\*)**: RDF-star directly addresses the limitation of expressing properties about statements. It introduces a concise syntax to assert triples *about* other triples (nested triples).
 
-** **For Holons:** This is invaluable for modeling holonic relationships. Instead of cumbersome reification, one could directly state `<<:CityA hsml:hasPart :BuildingB>> hsml:startDate "2023-01-01"^^xsd:date .` This allows the precise capture of metadata (like creation date, governing authority, or specific permissions) directly on the part-whole relationship between holonic Domains. It makes the model of a holon's internal composition much richer and more governable.
+** **For Holons:** This is invaluable for modeling holonic relationships. Instead of cumbersome reification, one could directly state `<< :CityA hsml:hasPart :BuildingB >> hsml:startDate "2023-01-01"^^xsd:date .` This allows the precise capture of metadata (like creation date, governing authority, or specific permissions) directly on the part-whole relationship between holonic Domains. It makes the model of a holon's internal composition much richer and more governable.
 
 * **Named Graphs**: Named Graphs extend RDF by allowing a collection of triples to be identified by a URI (its "name" or context). This effectively partitions the RDF graph into distinct sub-graphs.
 

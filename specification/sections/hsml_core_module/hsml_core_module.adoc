@@ -6,7 +6,7 @@ This clause describes the key architectural principles that underpin the Hypersp
 
 ==== The Universal Foundation: core:Entity
 
-The cornerstone of the HSML ontology is the `core:Entity` class, which serves as the universal root for every object, agent, and concept within the Spatial Web. This abstract class embodies the principle that everything which "is perceived, known, or inferred to exist" can be represented and managed within a single, coherent framework. By establishing `core:Entity` as the ultimate superclass, the standard ensures that all HSML-compliant software can uniformly ingest, validate, and manipulate heterogeneous constructs. This polymorphic foundation is the key to the semantic interoperability and extensibility mandated by the IEEE P2874 standard.
+The cornerstone of the HSML ontology is the `core:Entity` class, which serves as the universal root for every object, agent, and concept within the Spatial Web. This abstract class embodies the principle that everything which "is perceived, known, or inferred to exist" can be represented and managed within a single, coherent framework. By establishing `core:Entity` as the ultimate superclass, the standard ensures that all HSML-compliant software can uniformly ingest, validate, and manipulate heterogeneous constructs. This polymorphic foundation is the key to the semantic interoperability and extensibility mandated by <<ieee-p2874>>.
 
 ==== Decentralized Identity: The Spatial Web Identifier (SWID)
 
@@ -42,9 +42,11 @@ This nested structure of Domains (as holons) forms a *holarchy*—a hierarchy of
 
 This holonic model is critically important for modeling the Spatial Web for several reasons:
 
-*   **Reflects Real-World Complexity**: It allows for the creation of complex, multi-level systems that mirror natural and social structures, from biological organisms to human organizations.
-*   **Enables Polycentric Governance**: It provides a robust framework for distributed governance. Each Domain, as a holon, can maintain its own autonomy and internal rules while being an interdependent part of a larger containing Domain. This allows for policies and logic to be scoped at the appropriate level.
-*   **Promotes Scalability and Resilience**: The semi-autonomous nature of holons means they can manage local operations and disturbances without constant instruction from higher levels, creating a more resilient and scalable system.
+* **Reflects Real-World Complexity**: It allows for the creation of complex, multi-level systems that mirror natural and social structures, from biological organisms to human organizations.
+
+* **Enables Polycentric Governance**: It provides a robust framework for distributed governance. Each Domain, as a holon, can maintain its own autonomy and internal rules while being an interdependent part of a larger containing Domain. This allows for policies and logic to be scoped at the appropriate level.
+
+* **Promotes Scalability and Resilience**: The semi-autonomous nature of holons means they can manage local operations and disturbances without constant instruction from higher levels, creating a more resilient and scalable system.
 
 By modeling Domains as holons within a holarchy, HSML provides a powerful and flexible framework for organizing the vast, interconnected, and multi-layered contexts of the Spatial Web.
 
