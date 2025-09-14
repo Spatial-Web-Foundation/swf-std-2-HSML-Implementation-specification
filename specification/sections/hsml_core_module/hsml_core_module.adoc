@@ -57,9 +57,9 @@ This is complemented by the pragmatic reuse of established vocabularies. For exa
 
 === Normative Classes
 
-This clause provides the normative definitions for all class concepts within the HSML Activity Module. Each class is detailed in a table that specifies its URI, description, JSON-LD context name, usage notes, and relationship to other classes. 
+This clause provides the normative definitions for all class concepts within the HSML Activity Module. Each class is detailed in a table that specifies its URI, description, JSON-LD context name, usage notes, and relationship to other classes.
 
-The namespace prefix `core:` refers to `https://www.spatialwebfoundation.org/ns/hsml/core#`.
+The namespace prefix `core:` refers to identifier:[https://www.spatialwebfoundation.org/ns/hsml/core#].
 
 .Summary of Core Module Classes
 [cols="1,3",options="header"]

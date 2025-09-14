@@ -128,21 +128,24 @@ Specialized Hyperspaces extend this with richer operations (e.g., shortest path,
 
 Namespaces follow a predictable hierarchy:
 
-* Core: `https://www.spatialwebfoundation.org/ns/hsml/hyperspace#`
-* GraphSpace: `https://www.spatialwebfoundation.org/ns/hsml/hyperspace/graph#`
-* CellularSpace: `.../cell#`
-* VectorSpace: `.../vector#`
-* MetricSpace: `.../metric#`
-* Datatype Hyperspaces: `.../datatype#`
+* Core: identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#]
+* GraphSpace: identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/graph#]
+* CellularSpace: identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/cell#]
+* VectorSpace: identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/vector#]
+* MetricSpace: identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#]
+* Datatype Hyperspaces: identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/datatype#]
 
 This structure ensures clarity, modularity, and extensibility.
 
 By organizing namespaces in this way, several goals are achieved:
 
 * **Clarity** — It is immediately clear whether a term belongs to the core Hyperspace abstraction or a specialized extension.
+
 * **Modularity** — Implementers can import only the extensions they need, keeping systems lightweight.
+
 * **Extensibility** — New families of Hyperspaces (e.g., probabilistic space, tensor spaces, state-machine spaces) can be introduced
   simply by assigning them new sub-namespaces, without disrupting existing definitions.
+
 * **Best Practices** — This mirrors established approaches in ontology engineering, where namespaces are stable,
   descriptive, and composable.
 
@@ -217,7 +220,3 @@ include::hsml_path.adoc[leveloffset=+1]
 include::hsml_operation.adoc[leveloffset=+1]
 
 include::hsml_hyperspace_of_hyperspace.adoc[leveloffset=+1]
-
-
-
-

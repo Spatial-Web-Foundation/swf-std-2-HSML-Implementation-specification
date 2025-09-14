@@ -30,7 +30,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | Property | `schema:description`
-| IRI | `http://schema.org/description`
+| IRI | identifier:[http://schema.org/description]
 | JSON name | `description`
 | Requirement Level | **Mandatory**
 | Cardinality | **1..1**
@@ -46,7 +46,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | Property | `agt:hasSubGoal`
-| IRI | `https://www.spatialwebfoundation.org/ns/hsml/agent#hasSubGoal`
+| IRI | identifier:[https://www.spatialwebfoundation.org/ns/hsml/agent#hasSubGoal]
 | JSON name | `subGoal`
 | Requirement Level | **Optional**
 | Cardinality | `0..*` (zero to many)

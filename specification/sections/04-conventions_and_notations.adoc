@@ -30,34 +30,34 @@ Hyperspace modules form a hierarchy: `hyperspace` is the root, and its specializ
 |===
 |Prefix |Namespace IRI |Module
 
-|core | `https://www.spatialwebfoundation.org/ns/hsml/core#`
+|`core` | identifier:[https://www.spatialwebfoundation.org/ns/hsml/core#]
 |HSML Core
 
-|agent| `https://www.spatialwebfoundation.org/ns/hsml/agent#`
+|`agent`| identifier:[https://www.spatialwebfoundation.org/ns/hsml/agent#]
 |Agent Module
 
-|act | `https://www.spatialwebfoundation.org/ns/hsml/activity#`
+|`act` | identifier:[https://www.spatialwebfoundation.org/ns/hsml/activity#]
 |Activity Module
 
-|gov| `https://www.spatialwebfoundation.org/ns/hsml/gov#`
+|`gov`| identifier:[https://www.spatialwebfoundation.org/ns/hsml/gov#]
 |Governance Module
 
-|comm | `https://www.spatialwebfoundation.org/ns/hsml/comm#`
+|`comm` | identifier:[https://www.spatialwebfoundation.org/ns/hsml/comm#]
 |Communication Module
 
-|hspace | `https://www.spatialwebfoundation.org/ns/hsml/hyperspace#`
+|`hspace` | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace#]
 |Hyperspace Core
 
-|metric | `https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#`
+|`metric` | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#]
 |MetricSpace Submodule
 
-|topo | `https://www.spatialwebfoundation.org/ns/hsml/hyperspace/topo#`
+|`topo` | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/topo#]
 |TopologicalSpace Submodule
 
-|vector | `https://www.spatialwebfoundation.org/ns/hsml/hyperspace/vector#`
+|`vector` | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/vector#]
 |VectorSpace Submodule
 
-|cell | `https://www.spatialwebfoundation.org/ns/hsml/hyperspace/cell#`
+|`cell` | identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/cell#]
 |CellularSpace Submodule
 
 |===
@@ -188,14 +188,19 @@ This context performs the following functions:
 
 === SHACL Shape Syntax and Annotations
 
-Validation in HSML is expressed using SHACL shapes [SHACL].
+Validation in HSML is expressed using SHACL shapes <<w3c_shacl>>.
 The following conventions apply:
 
 * Shapes are defined in Turtle syntax with the `sh:` namespace.
-* If prefixes appear in a SHACL example without being explicitly declared, they SHALL be interpreted using the mappings in <<HSML Normative Namespaces>> or <<External Referenced Namespaces>>.
+
+* If prefixes appear in a SHACL example without being explicitly declared, they SHALL be interpreted using the mappings in <<hsml-normative-namespacesNamespaces>> or <<external-referenced-namespaces>>.
+
 * NodeShapes target specific HSML classes (e.g., `activity:Activity`).
+
 * Property shapes specify expected predicates, datatypes, or cardinality constraints.
+
 * HSML-specific annotations (e.g., `hsml:parameter`, `hsml:precondition`) may extend SHACL for Activity schemas.
+
 * Shapes may serve as **Activity payload templates**, validating inputs and outputs.
 
 

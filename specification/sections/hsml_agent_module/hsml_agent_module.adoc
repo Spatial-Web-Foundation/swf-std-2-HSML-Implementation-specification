@@ -40,7 +40,7 @@ By defining these and other goal specializations (like **Hard** vs. **Soft Goals
 
 This clause provides the normative definitions for all class concepts within the HSML Agent Module. Each class is detailed in a table that specifies its URI, description, JSON-LD context name, usage notes, and relationship to other classes.
 
-The namespace prefix `agt:` refers to `https://www.spatialwebfoundation.org/ns/hsml/agent#`.
+The namespace prefix `agt:` refers to identifier:[https://www.spatialwebfoundation.org/ns/hsml/agent#].
 
 ==== Summary of Normative Classes
 

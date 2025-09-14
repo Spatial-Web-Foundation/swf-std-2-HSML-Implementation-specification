@@ -52,9 +52,9 @@ The combined use of these two properties creates a comprehensive, dual-axis trac
 
 === Normative Classes
 
-This clause provides the normative definitions for all class concepts within the HSML Activity Module. Each class is detailed in a table that specifies its URI, description, JSON-LD context name, usage notes, and relationship to other classes. 
+This clause provides the normative definitions for all class concepts within the HSML Activity Module. Each class is detailed in a table that specifies its URI, description, JSON-LD context name, usage notes, and relationship to other classes.
 
-The namespace prefix `act:` refers to `https://www.spatialwebfoundation.org/ns/hsml/activity#`.
+The namespace prefix `act:` refers to identifier:[https://www.spatialwebfoundation.org/ns/hsml/activity#].
 
 
 ==== Summary of Normative Classes

@@ -67,14 +67,15 @@ This ensures HSML provides both **generic interoperability** and **domain-specif
 
 The CellularSpace vocabulary resides under its own namespace:
 
-* `https://www.spatialwebfoundation.org/ns/hsml/hyperspace/cell#`
+* identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/cell#]
 
 This aligns with the modular namespace strategy of HSML, ensuring clarity, extensibility, and best practices in ontology design.
 
 === Normative Classes
 
 This clause provides the normative definitions for all class concepts within the CellularSpace Module.
-The namespace prefix `cell:` refers to `https://www.spatialwebfoundation.org/ns/hsml/hyperspace/cell#`.
+
+The namespace prefix `cell:` refers to identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/cell#].
 
 .Summary of CellularSpace Module Classes
 [cols="1,3",options="header"]
