@@ -61,12 +61,12 @@ They separate structural representation (the Hyperspace itself) from the semanti
 ==== Policy
 
 A set of constraints or rules governing the behavior of Entities, Domains, and Activities.
-Defined in IEEE P2874 §6.6.7, Policies specify permissions, prohibitions, or obligations, expressed declaratively (e.g., SHACL, OWL, SPARQL).
+Defined in <<ieee-p2874,clause="6.6.7">>, Policies specify permissions, prohibitions, or obligations, expressed declaratively (e.g., SHACL, OWL, SPARQL).
 
 ==== Norm
 
 A socially or organizationally defined expectation governing behavior within a Domain or Activity.
-Defined in IEEE P2874, Norms complement Policies by specifying conventions, standards, or best practices that guide interactions among Entities.
+Defined in <<ieee-p2874>>, Norms complement Policies by specifying conventions, standards, or best practices that guide interactions among Entities.
 
 ==== SWID
 

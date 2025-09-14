@@ -6,7 +6,7 @@ for representing **entities, domains, activities, channels, tools, and digital t
 It is both human- and machine-readable, designed to ensure semantic precision, governance, and
 interoperability at web scale.
 
-As envisioned in IEEE P2874/D3.3.2, the Spatial Web is a globally interoperable socio-technical fabric
+As envisioned in <<ieee-p2874>>, the Spatial Web is a globally interoperable socio-technical fabric
 connecting humans, autonomous systems, and the Internet of Things (IoT). Its purpose is to integrate
 the digital and physical worlds into a **shared semantic fabric** where information is contextual,
 interactions are secure, and governance is intrinsic. Realizing this vision requires a data model capable of:
@@ -25,7 +25,7 @@ Instead, HSML forms the semantic layer upon which those protocols depend.
 
 [IMPORTANT]
 ====
-IEEE P2874/D3.3.2 is an approved draft of a proposed IEEE Standard and remains subject to change.
+<<ieee-p2874>> is an approved draft of a proposed IEEE Standard and remains subject to change.
 This HSML Implementation Specification has been developed to meet the Implementation Specification
 requirements defined within the IEEE P2874 Draft Standard.
 ====
@@ -68,21 +68,21 @@ The development of the Spatial Web is driven by converging technological and soc
 
 Ultimately, the Spatial Web is conceived as a **socio-technical system of systems**. Its realization must
 address not only technical challenges of modeling, computation, and communication, but also the
-**social, cultural, ethical, and legal dimensions** of technology use. IEEE P2874 is therefore designed as
+**social, cultural, ethical, and legal dimensions** of technology use. <<ieee-p2874>> is therefore designed as
 a socio-technical standard, balancing technical infrastructure with governance frameworks to ensure a
 secure, interoperable, and human-centered digital-physical reality.
 
 
 === Relationship to IEEE P2874 (Spatial Web Foundation)
 
-This HSML Implementation Specification is directly derived from and builds upon the IEEE P2874/D3.3.2 Draft Standard for Spatial Web Protocol, Architecture and Governance, dated March 2025. Material from the Spatial Web Foundation's "Spatial Web Protocol, Architecture and Governance," Version D3.3, copyright © 2025 Spatial Web Foundation, was used with permission as the base for this standard.
+This HSML Implementation Specification is directly derived from and builds upon the <<ieee-p2874>> Draft Standard for Spatial Web Protocol, Architecture and Governance, dated March 2025. Material from the Spatial Web Foundation's "Spatial Web Protocol, Architecture and Governance," Version D3.3, copyright © 2025 Spatial Web Foundation, was used with permission as the base for this standard.
 
-As a reference model, the IEEE P2874 standard establishes the set of required modules and sub-modules for Spatial Web-compliant implementations, along with their minimum functions and associated information models. It defines requirements for a set of Implementation Specifications, such as this HSML document, and identifies existing technologies and standards to be integrated into these implementations.
+As a reference model, the <<ieee-p2874>> standard establishes the set of required modules and sub-modules for Spatial Web-compliant implementations, along with their minimum functions and associated information models. It defines requirements for a set of Implementation Specifications, such as this HSML document, and identifies existing technologies and standards to be integrated into these implementations.
 
 
 === Goals and Benefits of HSML
 
-The overarching purpose of the IEEE P2874 standard, and by extension this HSML Implementation Specification, is to provide a holistic and coherent technical framework for implementing a collaborative, interactive Spatial Web and shared world system. HSML is designed as a human- and machine-readable modeling language and semantic data ontology schema that describes objects, relations, actions, activities, and their permissions.
+The overarching purpose of the <<ieee-p2874>> standard, and by extension this HSML Implementation Specification, is to provide a holistic and coherent technical framework for implementing a collaborative, interactive Spatial Web and shared world system. HSML is designed as a human- and machine-readable modeling language and semantic data ontology schema that describes objects, relations, actions, activities, and their permissions.
 
 Specifically, HSML aims to achieve the following key goals:
 

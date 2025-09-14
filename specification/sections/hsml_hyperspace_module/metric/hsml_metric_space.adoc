@@ -9,7 +9,7 @@ This enables:
 * **Comparative analysis** – measuring similarity between embeddings, geometries, or categorical features.
 * **Path evaluation** – computing shortest paths, least-cost routes, or similarity-based traversals.
 
-By separating **structural relationships** (adjacency, connectivity) from **metric semantics**, HSML supports **portable and engine-independent computations** across graphs, cellular grids, and vector spaces.  In IEEE P2874 terms, this corresponds to the requirement that a Hyperspace may declare one or more **Metrics** to enable interoperable spatial and similarity-based operations.
+By separating **structural relationships** (adjacency, connectivity) from **metric semantics**, HSML supports **portable and engine-independent computations** across graphs, cellular grids, and vector spaces.  In <<ieee-p2874>> terms, this corresponds to the requirement that a Hyperspace may declare one or more **Metrics** to enable interoperable spatial and similarity-based operations.
 
 
 [[metric-metricspace-class]]

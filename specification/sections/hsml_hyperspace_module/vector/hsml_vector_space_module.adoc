@@ -2,19 +2,19 @@
 
 === Introduction
 
-The VectorSpace Module specializes the Hyperspace abstraction for **linear spaces**.  
-It realizes the *VECTOR SPACE* concept of IEEE P2874 (§ 6.2.x) as a Hyperspace whose elements admit **linear combination over a scalar field**, with an abstract **origin** and **composable arrows** corresponding to linear displacements.
+The VectorSpace Module specializes the Hyperspace abstraction for **linear spaces**.
+It realizes the *VECTOR SPACE* concept of <<ieee-p2874,clause="6.2.x">> as a Hyperspace whose elements admit **linear combination over a scalar field**, with an abstract **origin** and **composable arrows** corresponding to linear displacements.
 
 ____
-“A vector space is a set whose elements can be added and scaled, satisfying linearity axioms.  
+“A vector space is a set whose elements can be added and scaled, satisfying linearity axioms.
 In HSML, a VectorSpace is a Hyperspace that also qualifies as a MetricSpace, exposing linear and distance semantics without prescribing a particular element encoding or path representation.”
 ____
 
-This module is intentionally **non-prescriptive** about representation. It defines vector-space semantics and mapping hooks while allowing deployments to bind coordinates, arrays, or geometries according to their needs.  
+This module is intentionally **non-prescriptive** about representation. It defines vector-space semantics and mapping hooks while allowing deployments to bind coordinates, arrays, or geometries according to their needs.
 Vector spaces are used across the Spatial Web for **geometric coordinates**, **embeddings and feature spaces**, **signal/field representations**, and **local linearizations** of complex manifolds.
 
 By design, a `vector:VectorSpace`:
 
-* Inherits all properties of `hspace:Hyperspace` (elements, arrows, paths, operations).  
-* Inherits all properties of `metric:MetricSpace` (distance, polarity, axioms, metrics).  
-* Adds linear structure hooks (scalar field, dimension, origin policy, CRS).  
+* Inherits all properties of `hspace:Hyperspace` (elements, arrows, paths, operations).
+* Inherits all properties of `metric:MetricSpace` (distance, polarity, axioms, metrics).
+* Adds linear structure hooks (scalar field, dimension, origin policy, CRS).

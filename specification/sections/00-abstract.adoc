@@ -11,4 +11,4 @@ Every entity is identified by a **Spatial Web Identifier (SWID)** conformant wit
 
 HSML aligns with the **Hyperspatial Transaction Protocol (HSTP)** for message encapsulation and activity routing, and with the **Universal Domain Graph (UDG)** architecture for distributed discovery, linkage, and state management. Together, these enable interoperable, semantically consistent interactions among autonomous agents, digital twins, IoT devices, and distributed services.
 
-As an Implementation Specification, HSML fulfills the compliance requirements of Annex A of IEEE P2874, providing the foundation for **cross-domain semantic interoperability, verifiable credential exchange, governed contract execution, explainable AI, and secure, zero-trust operations** within the global Spatial Web ecosystem.
+As an Implementation Specification, HSML fulfills the compliance requirements of <<ieee-p2874,annex="A">>, providing the foundation for **cross-domain semantic interoperability, verifiable credential exchange, governed contract execution, explainable AI, and secure, zero-trust operations** within the global Spatial Web ecosystem.

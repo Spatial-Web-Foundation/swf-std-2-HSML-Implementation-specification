@@ -1,6 +1,6 @@
 == Overview
 
-This document provides a high-level overview of the Hyperspace Modeling Language (HSML) specification. HSML is the **semantic foundation of the Spatial Web**, enabling consistent representation of entities, domains, activities, spaces, and governance across distributed systems. It describes the modeling paradigm, guiding principles, modular structure, and formal extension mechanisms needed to support diverse domains while ensuring interoperability and compliance with IEEE P2874.
+This document provides a high-level overview of the Hyperspace Modeling Language (HSML) specification. HSML is the **semantic foundation of the Spatial Web**, enabling consistent representation of entities, domains, activities, spaces, and governance across distributed systems. It describes the modeling paradigm, guiding principles, modular structure, and formal extension mechanisms needed to support diverse domains while ensuring interoperability and compliance with <<ieee-p2874>>.
 
 
 === HSML Modeling Paradigm
@@ -108,7 +108,7 @@ Building on the Core Model, HSML defines a set of modules that introduce special
 
 ** *Governance Module* – defines credentials, contracts, norms, and policies that domains declare and enforce.
 
-This modular architecture enables **plug-and-play deployment**: implementers can select the subset of modules required for their application, while remaining compatible with the broader HSML ecosystem and the IEEE P2874 Spatial Web standard (see <<fig-hsml-core-modules>>).
+This modular architecture enables **plug-and-play deployment**: implementers can select the subset of modules required for their application, while remaining compatible with the broader HSML ecosystem and the <<ieee-p2874>> Spatial Web standard (see <<fig-hsml-core-modules>>).
 
 
 [[fig-hsml-core-modules]]

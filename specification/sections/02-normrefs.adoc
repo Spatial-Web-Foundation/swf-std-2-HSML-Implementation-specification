@@ -7,7 +7,7 @@
 
 * [[[w3c_json-ld11,W3C json-ld11]]]
 
-* [[[ieee-p2874,IEEE P2874/D-3.1-2024-06]]], Hyperspace Modeling Language (HSML) Specification
+* [[[ieee-p2874,IEEE P2874/D-3.3]]], Hyperspace Modeling Language (HSML) Specification
 
 * [[[w3c_rdf11-concepts,W3C REC rdf11-concepts]]]
 

@@ -2,11 +2,11 @@
 
 === Architectural Principles and Design Rationale
 
-This clause explains the design choices behind the HSML Governance Module and how they satisfy IEEE P2874’s requirements for governable, auditable, and interoperable action across Domains. The principles are informative (non-normative), but they motivate the normative models and constraints defined in subsequent clauses.
+This clause explains the design choices behind the HSML Governance Module and how they satisfy <<ieee-p2874>>’s requirements for governable, auditable, and interoperable action across Domains. The principles are informative (non-normative), but they motivate the normative models and constraints defined in subsequent clauses.
 
 ==== The Norm/Policy Separation: Atomic Rules vs Governance Bundles
 
-The foundation of the governance model is the separation between atomic rules and the governance bundles that publish them. `act:ActivitySchema` defines the universal semantics of an action—its roles, inputs, outputs, and pre/post conditions—in a way that is portable and immutable across Domains. By contrast, a `gov:Norm` represents a single deontic rule. Each Norm specifies whether an action or state is Obligatory, Prohibited, or Permitted, and links that modality to explicit machine-executable conditions (`core:Condition`). Norms are intentionally minimal: they state “what rule applies, to whom, and under which condition.” 
+The foundation of the governance model is the separation between atomic rules and the governance bundles that publish them. `act:ActivitySchema` defines the universal semantics of an action—its roles, inputs, outputs, and pre/post conditions—in a way that is portable and immutable across Domains. By contrast, a `gov:Norm` represents a single deontic rule. Each Norm specifies whether an action or state is Obligatory, Prohibited, or Permitted, and links that modality to explicit machine-executable conditions (`core:Condition`). Norms are intentionally minimal: they state “what rule applies, to whom, and under which condition.”
 
 To make those rules effective in practice, authorities issue `gov:Policy` artifacts. A Policy bundles one or more Norms and supplies the governance context that a Norm by itself does not carry. Policies declare scope (which actors, activities, or domains the rules apply to), set validity periods, publish lifecycle state, establish ordering in case of conflicts, and—critically—reference credential profiles that define what types of verifiable credentials are acceptable. This separation allows Norms to remain atomic and reusable across contexts, while Policies provide the authoritative packaging that determines where and when Norms are in force.
 

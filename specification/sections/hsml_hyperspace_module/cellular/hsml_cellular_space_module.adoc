@@ -31,7 +31,7 @@ a MetricSpace view (distances), or a CellularSpace view (discrete tilings) witho
 A CellularSpace is built upon the concept of the `cell:Cell`, a discrete unit that partitions a continuous region into finite, indivisible elements.
 Unlike vector coordinates (continuous) or topological sets (abstract neighborhoods), a cell represents a **bounded piece of space** with an identifier, optional geometry, and adjacency relations.
 
-This reflects IEEE P2874’s notion that spatial reasoning must sometimes operate at the **granularity of discrete tiles**—pixels, hexagons, voxels—rather than continuous measures.
+This reflects <<ieee-p2874>>’s notion that spatial reasoning must sometimes operate at the **granularity of discrete tiles**—pixels, hexagons, voxels—rather than continuous measures.
 Cells form the foundation for scalable computations such as tiling the Earth with DGGS codes, pathfinding in grid-based simulations, and aggregating spatial statistics.
 
 ==== Adjacency as the Fundamental Relation: cell:CellAdjacency

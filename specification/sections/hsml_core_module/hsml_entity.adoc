@@ -2,7 +2,7 @@
 [[core-entity]]
 === Class: core:Entity
 
-The class `core:Entity` realizes the base concept **ENTITY** in IEEE P2874 Section 6.6.2, defined as “that which is perceived, known, or inferred to exist, has existed, or is anticipated to exist”.
+The class `core:Entity` realizes the base concept **ENTITY** in <<ieee-p2874,clause="6.6.2">>, defined as “that which is perceived, known, or inferred to exist, has existed, or is anticipated to exist”.
 
 As the root of the Spatial Web ontology, `core:Entity` provides the universal, abstract foundation upon which all other HSML classes are built. It establishes the mandatory requirements for universal identification and class declaration, ensuring that every object in the ecosystem is uniquely addressable and explicitly typed.
 
