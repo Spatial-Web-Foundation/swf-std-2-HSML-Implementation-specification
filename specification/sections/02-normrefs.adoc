@@ -3,7 +3,7 @@
 
 * [[[w3c_did-core,W3C did-core]]], Decentralized Identifiers (DIDs) v1.0
 
-* [[[w3c_did-spec-registries,W3C did-spec-registries]]]
+* [[[w3c_did-spec-registries,W3C NOTE did-spec-registries]]]
 
 * [[[w3c_json-ld11,W3C json-ld11]]]
 
@@ -30,13 +30,13 @@ span:docid.w3c[W3C CR RDF-star]
 
 * [[[ogc_geosparql,OGC 22-047r1]]]
 
-* [[[w3c_vc-data-model-20,W3C REC vc-data-model-2.0]]]
+* [[[w3c_vc-data-model-20,W3C REC vc-data-model]]]
 
-* [[[w3c_vc-data-integrity-10,W3C REC vc-data-integrity-1.0]]]
+* [[[w3c_vc-data-integrity-10,W3C REC vc-data-integrity]]]
 
-* [[[w3c_controlled-identifiers-10,W3C REC controlled-identifiers-1.0]]]
+* [[[w3c_cid-10,W3C REC cid-1.0]]]
 
-* [[[w3c_vc-status-list-2021,W3C REC vc-status-list-2021]]]
+* [[[w3c_vc-status-list-2021,W3C WD vc-status-list]]]
 
 * [[[w3c_vc-jose-cose,W3C REC vc-jose-cose]]]
 
