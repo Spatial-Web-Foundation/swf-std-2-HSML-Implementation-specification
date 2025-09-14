@@ -193,7 +193,7 @@ The following conventions apply:
 
 * Shapes are defined in Turtle syntax with the `sh:` namespace.
 
-* If prefixes appear in a SHACL example without being explicitly declared, they SHALL be interpreted using the mappings in <<hsml-normative-namespacesNamespaces>> or <<external-referenced-namespaces>>.
+* If prefixes appear in a SHACL example without being explicitly declared, they SHALL be interpreted using the mappings in <<hsml-normative-namespaces>> or <<external-referenced-namespaces>>.
 
 * NodeShapes target specific HSML classes (e.g., `activity:Activity`).
 
