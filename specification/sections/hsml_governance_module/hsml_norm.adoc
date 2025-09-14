@@ -3,7 +3,10 @@
 
 The class `gov:Norm` realizes the **NORM** concept in <<ieee-p2874,clause="6.6.4">>:
 
-*“An atomic deontic rule—Obligation, Prohibition, or Permission—governing behavior in a Domain and expressed via one or more evaluable Conditions.”*
+[quote]
+____
+An atomic deontic rule—Obligation, Prohibition, or Permission—governing behavior in a Domain and expressed via one or more evaluable Conditions.
+____
 
 A Norm is the **atomic rule unit**: it specifies what modality (obligation, prohibition, permission) applies to which targets, and under which conditions.
 It does **not** carry issuer, validity, credential gates, or precedence; those are modeled at the `gov:Policy` level.

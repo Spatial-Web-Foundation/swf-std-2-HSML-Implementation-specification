@@ -3,7 +3,10 @@
 
 The class hspace:Hyperspace realises the HYPERSPACE concept in <<ieee-p2874,clause="6.6.3">> and Hyperspace Modeling principles:
 
-“A HYPERSPACE is a spatial structure that specifies relationships among elements (points) in a DOMAIN, including notions such as adjacency, distance, connectivity, or metric, enabling spatial reasoning and operations within the Spatial Web.”
+[quote]
+____
+A HYPERSPACE is a spatial structure that specifies relationships among elements (points) in a DOMAIN, including notions such as adjacency, distance, connectivity, or metric, enabling spatial reasoning and operations within the Spatial Web.
+____
 
 hspace:Hyperspace provides the formal structure for expressing the spatial logic that governs how entities in a Domain relate to each other. It generalizes topology, metric spaces, graphs, cellular grids, vector spaces, and datatype spaces into a unified model, supporting composable and navigable relationships across Domains.
 

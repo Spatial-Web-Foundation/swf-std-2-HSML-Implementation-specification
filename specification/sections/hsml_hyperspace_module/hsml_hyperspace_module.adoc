@@ -5,9 +5,10 @@
 The Hyperspace Module defines the structural foundation for representing spatial relationships in HSML.
 It realizes the *HYPERSPACE* concept of <<ieee-p2874,clause="6.2.1">>, which defines a hyperspace as:
 
+[quote]
 ____
-“A set whose elements are related by a formal notion of path, satisfying identity and composition laws.
-Paths may be abstract, as long as they can be traversed in a fashion akin to the paths between points in familiar spaces.”
+A set whose elements are related by a formal notion of path, satisfying identity and composition laws.
+Paths may be abstract, as long as they can be traversed in a fashion akin to the paths between points in familiar spaces.
 ____
 
 This abstract definition is intentionally broad. It allows HSML to treat a wide range of structures—

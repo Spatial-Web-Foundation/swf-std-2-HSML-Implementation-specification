@@ -4,7 +4,10 @@
 
 The class `agt:Person` realises the **PERSON** concept in <<ieee-p2874,clause="6.3.2.1.6">>, a special subtype of `agt:Agent` that maintains a self-sovereign identity.
 
-“A person type of Domain refers to entities belonging to the broader agential Domain, but maintaining the capability to control their own Self-Sovereign Identity.”
+[quote]
+____
+A person type of Domain refers to entities belonging to the broader agential Domain, but maintaining the capability to control their own Self-Sovereign Identity.
+____
 
 `agt:Person` represents a human individual in the Spatial Web. While it inherits all the goal-directed and capability-driven characteristics of an `agt:Agent`, its primary distinction is its intrinsic link to a self-sovereign identity, ensuring individual control over personal data and interactions.
 

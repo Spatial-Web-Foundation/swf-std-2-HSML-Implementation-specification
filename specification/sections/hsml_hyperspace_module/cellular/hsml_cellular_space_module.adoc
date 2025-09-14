@@ -6,10 +6,11 @@
 The CellularSpace Module defines the HSML specialization of Hyperspace for **discrete partitioned structures**.
 It realizes the *CELLULAR SPACE* concept of <<ieee-p2874,clause="6.2.1">>, which states:
 
+[quote]
 ____
-“A space partitioned into finite, discrete units (cells) such that adjacency between units is explicitly defined
+A space partitioned into finite, discrete units (cells) such that adjacency between units is explicitly defined
 by shared boundaries, vertices, or faces. Cells may be uniform or hierarchical, and together they form
-a covering of the domain.”
+a covering of the domain.
 ____
 
 This definition allows HSML to treat diverse gridded or tiled representations—raster images,

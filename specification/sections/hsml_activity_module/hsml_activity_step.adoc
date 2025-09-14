@@ -3,7 +3,10 @@
 
 The class `act:ActivityStep` realizes the **ACTIVITY STEP** concept as part of a `act:CompositeActivitySchema` in <<ieee-p2874,clause="6.6.3">>.
 
-“An ACTIVITY STEP is an addressable node within a composite activity's workflow, representing a discrete stage of execution that uses a specific `act:ActivitySchema` to define its logic.”
+[quote]
+____
+An ACTIVITY STEP is an addressable node within a composite activity's workflow, representing a discrete stage of execution that uses a specific `act:ActivitySchema` to define its logic.
+____
 
 `act:ActivityStep` is a structural component used to build complex workflows. It acts as a placeholder or node in a workflow graph, separating the structure of the workflow from the logic of the individual steps. This allows for the creation of modular, reusable, and governable multi-step processes with declarative control flow, including **conditional branching**.
 

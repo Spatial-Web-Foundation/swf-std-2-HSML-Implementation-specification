@@ -3,7 +3,10 @@
 
 The class core:Thing realises the THING DOMAIN type defined in <<ieee-p2874,clause="6.3.2.1.7">>:
 
-“A THING is a DOMAIN representing a bounded item without agency that can be acted upon, sensed, or described in the Spatial Web.”
+[quote]
+____
+A THING is a DOMAIN representing a bounded item without agency that can be acted upon, sensed, or described in the Spatial Web.
+____
 
 core:Thing represents physical or virtual entities that lack autonomous action but may be observed, measured, manipulated, or referenced by Agents or Activities. Examples include devices, sensors, vehicles, digital files, or other discrete objects.
 

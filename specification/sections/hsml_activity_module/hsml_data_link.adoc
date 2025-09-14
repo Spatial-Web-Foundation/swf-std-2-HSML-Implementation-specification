@@ -3,7 +3,10 @@
 
 The class `act:DataLink` realizes the **DATA LINK** concept as part of a `act:CompositeActivitySchema` in <<ieee-p2874,clause="6.6.3">>.
 
-“A DATA LINK is a construct for connecting the data flow between steps in a composite activity.”
+[quote]
+____
+A DATA LINK is a construct for connecting the data flow between steps in a composite activity.
+____
 
 `act:DataLink` is a structural entity that explicitly models the "wiring" of data within a complex workflow. It connects the output of one step to the input of another, or links the inputs and outputs of the composite schema to its internal steps. By modeling data flow as a first-class entity, the standard makes it addressable, auditable, and governable.
 

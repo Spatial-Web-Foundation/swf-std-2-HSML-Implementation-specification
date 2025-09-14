@@ -3,7 +3,10 @@
 
 The class `act:Activity` realises the **ACTIVITY** concept defined in <<ieee-p2874,clause="6.6.3">>:
 
-“An ACTIVITY is an execution-time entity representing a single, concrete, stateful instance of an `act:ActivitySchema` performed by a specific agent at a specific time.”
+[quote]
+____
+An ACTIVITY is an execution-time entity representing a single, concrete, stateful instance of an `act:ActivitySchema` performed by a specific agent at a specific time.
+____
 
 `act:Activity` is the primary entity for recording and tracking the execution of an action in the Spatial Web. It serves as a stateful, auditable record that links the abstract `act:ActivitySchema` to the concrete agents and values involved in a specific occurrence.
 

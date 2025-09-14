@@ -3,7 +3,10 @@
 
 The class core:Concept realises the CONCEPT DOMAIN type as described in <<ieee-p2874,clause="6.3.2.1.3">>:
 
-“A CONCEPT is a DOMAIN representing an abstract, non-physical entity or idea that provides semantic context or categorization for other Entities in the Spatial Web.”
+[quote]
+____
+A CONCEPT is a DOMAIN representing an abstract, non-physical entity or idea that provides semantic context or categorization for other Entities in the Spatial Web.
+____
 
 core:Concept is used to model abstract or symbolic constructs, classifications, or types that help structure knowledge, rules, or ontological categories in the Spatial Web. It does not represent physical or agentic entities, but rather supports semantic reasoning, categorization, and rule expression.
 

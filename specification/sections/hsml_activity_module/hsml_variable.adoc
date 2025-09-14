@@ -3,7 +3,10 @@
 
 The class `act:Variable` realizes the **VARIABLE** concept as part of an `act:ActivitySchema` in <<ieee-p2874,clause="6.6.3">>.
 
-“A VARIABLE represents a typed parameter or binding placeholder within an ACTIVITY SCHEMA, used to specify required inputs, produced outputs, or contextual bindings.”
+[quote]
+____
+A VARIABLE represents a typed parameter or binding placeholder within an ACTIVITY SCHEMA, used to specify required inputs, produced outputs, or contextual bindings.
+____
 
 `act:Variable` is a structural component that formally defines the interface for a single parameter within a schema. It supports the **declaration -> binding -> validation** pipeline by separating the declaration of a variable's expected type from the formal conditions used to enforce its validity.
 

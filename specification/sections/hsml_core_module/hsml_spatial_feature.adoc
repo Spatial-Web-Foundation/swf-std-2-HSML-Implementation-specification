@@ -3,7 +3,10 @@
 
 The class core:SpatialFeature realises the SPATIAL FEATURE concept, corresponding to the GEOGRAPHIC DOMAIN type described in <<ieee-p2874,clause="6.3.2.1.2">>:
 
-“A SPATIAL FEATURE is an ENTITY representing a location-bound or geometry-bearing element within a Domain, corresponding to a GEOGRAPHIC DOMAIN type where position, extent, or spatial relationships are essential.”
+[quote]
+____
+A SPATIAL FEATURE is an ENTITY representing a location-bound or geometry-bearing element within a Domain, corresponding to a GEOGRAPHIC DOMAIN type where position, extent, or spatial relationships are essential.
+____
 
 `core:SpatialFeature` represents real or abstract entities anchored in space—such as landmarks, boundaries, sensor sites, or natural features—that are meaningful in spatial reasoning and analysis. It is the fundamental class for binding semantic entities to geospatial structure in the Spatial Web.
 

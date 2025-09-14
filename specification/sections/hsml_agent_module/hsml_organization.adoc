@@ -3,7 +3,10 @@
 
 The class hsml:Organization realises the ORGANIZATION DOMAIN concept in <<ieee-p2874,clause="6.6.3">>:
 
-“An ORGANIZATION is a DOMAIN representing a group of Agents operating under shared governance, norms, or objectives within the Spatial Web.”
+[quote]
+____
+An ORGANIZATION is a DOMAIN representing a group of Agents operating under shared governance, norms, or objectives within the Spatial Web.
+____
 
 hsml:Organization represents collective actors—such as companies, institutions, or public agencies—that initiate, govern, and coordinate Activities, issue Contracts, and manage subordinate Domains, Agents, and Things.
 

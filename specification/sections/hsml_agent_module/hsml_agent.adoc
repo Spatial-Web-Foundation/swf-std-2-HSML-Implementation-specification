@@ -3,7 +3,10 @@
 
 The class `agt:Agent` realises the **AGENT** concept in <<ieee-p2874,clause="6.6.3">>:
 
-“An ENTITY that senses, responds, and maintains a model of its environment while performing ACTIVITIES to achieve its goals.”
+[quote]
+____
+An ENTITY that senses, responds, and maintains a model of its environment while performing ACTIVITIES to achieve its goals.
+____
 
 `agt:Agent` represents an autonomous entity capable of perceiving its environment, making decisions, and enacting `act:Activity` instances in pursuit of its goals. It may represent a person, robot, AI system, or other autonomous entity.
 

@@ -5,9 +5,10 @@
 The TopologicalSpace Module specializes the Hyperspace abstraction for structures defined by **neighborhoods, adjacency, and continuity**, rather than numeric coordinates.
 It realizes the *TOPOLOGICAL SPACE* concept referenced in <<ieee-p2874,clause="6.2.1">> and HSML Hyperspace design:
 
+[quote]
 ____
-“A topological space is a set of elements together with a structure that specifies which subsets are ‘open,’
-thereby defining notions of adjacency, neighborhood, and continuity without reference to metric distance.”
+A topological space is a set of elements together with a structure that specifies which subsets are ‘open,’
+thereby defining notions of adjacency, neighborhood, and continuity without reference to metric distance.
 ____
 
 In HSML, a TopologicalSpace provides a declarative way to represent **connectivity, adjacency, boundaries, and regions**.

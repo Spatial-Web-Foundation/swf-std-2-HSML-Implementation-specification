@@ -3,7 +3,10 @@
 
 The class `gov:Contract` realises the **CONTRACT** concept in <<ieee-p2874,clause="6.6.4">>:
 
-*“A binding agreement between two or more parties—enforceable by law or internal policy—that governs one or more Activities in the Spatial Web.”*
+[quote]
+____
+A binding agreement between two or more parties—enforceable by law or internal policy—that governs one or more Activities in the Spatial Web.
+____
 
 `gov:Contract` links the initiating *Domain*, the participating *Agents*, the governed *Activity* (or Activities), and the evolving *ContractStatus* instances that capture its lifecycle.
 
