@@ -1,30 +1,36 @@
 ==== Conceptual Layering
 
-[mermaid]
-----
-graph TD
-    subgraph Domain
-        D[hsml:Domain]
-    end
+.Conceptual layering of HSML communication
+image::specification/images/mermaid-hsml_communication_conceptual_layering.svg[]
 
-    subgraph Communication
-        C[chan:Channel]
-        M[comm:Message]
-    end
-
-    subgraph Transport
-        H[HSTP Envelope & Payload]
-    end
-
-    D -->|hosts| C
-    C -->|forActivity| A[act:Activity]
-    C -->|groups| M
-    M -->|carriedAs| H
-    H -->|binding| T[HTTP/QUIC/MQTT]
-
-    style D fill:#e0f7fa,stroke:#00796b,stroke-width:2px
-    style C fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
-    style M fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
-    style H fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
-    style T fill:#eceff1,stroke:#455a64,stroke-width:1px
-----
+// NOTE: Metanorma does not support mermaid diagrams yet, so the diagram source
+// is included as a comment below.
+//
+// [mermaid]
+// ----
+// graph TD
+//     subgraph Domain
+//         D[hsml:Domain]
+//     end
+//
+//     subgraph Communication
+//         C[chan:Channel]
+//         M[comm:Message]
+//     end
+//
+//     subgraph Transport
+//         H[HSTP Envelope & Payload]
+//     end
+//
+//     D -->|hosts| C
+//     C -->|forActivity| A[act:Activity]
+//     C -->|groups| M
+//     M -->|carriedAs| H
+//     H -->|binding| T[HTTP/QUIC/MQTT]
+//
+//     style D fill:#e0f7fa,stroke:#00796b,stroke-width:2px
+//     style C fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+//     style M fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
+//     style H fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+//     style T fill:#eceff1,stroke:#455a64,stroke-width:1px
+// ----

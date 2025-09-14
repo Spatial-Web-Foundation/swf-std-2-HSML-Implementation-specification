@@ -1,49 +1,55 @@
 
-[mermaid]
-....
-sequenceDiagram
-    autonumber
-    actor Agent
-    participant Domain as Domain
-    participant ActSchema as ActivitySchema
-    participant Gov as Governance Engine
-    participant PolicyReg as Policy Catalog
-    participant Norms as Norm Resolver
-    participant Cred as Credential Verifier
-    participant State as State/Fact Service
-    participant Contract as Contract Ledger
-    participant Enforce as Enforcement/Monitor
+.Conceptual layering of HSML governance
+image::specification/images/mermaid-hsml_governance_decision_flow.svg[]
 
-    Agent->>Gov: Request decision for ActSchema within Domain (actors, time)
-    note right of Gov: Start governance evaluation
-
-    Gov->>PolicyReg: Discover applicable Policies(Domain, ActSchema, actors, time)
-    PolicyReg-->>Gov: Policies[]
-
-    Gov->>Norms: Collect Norms from Policies
-    Norms-->>Gov: Norms[]
-    Gov->>Norms: Apply precedence & resolve conflicts
-    Norms-->>Gov: Effective Norm Set
-
-    Gov->>Cred: Verify Agent credentials vs CredentialProfiles (from Policies)
-    Cred-->>Gov: Credential result (pass/fail) + evidence
-
-    alt Credential gate passed
-        Gov->>State: Evaluate executable Norm conditions against current state
-        State-->>Gov: Condition evaluation results
-        Gov->>Gov: Combine results → decision {permit | deny | permit+obligations}
-    else Credential gate failed
-        Gov->>Gov: Decision = deny (insufficient credentials)
-    end
-
-    Gov->>Contract: Record decision, policies/norms applied, credential & condition evidence
-    Contract-->>Gov: ContractRef
-
-    opt If decision == permit ∧ obligations exist
-        Gov->>Enforce: Start runtime obligation monitoring (policy-defined)
-        Enforce-->>Gov: Violation events (if any)
-        Gov->>Contract: Append enforcement actions & evidence
-    end
-
-    Gov-->>Agent: Decision + ContractRef (evidence trail)
-....
+// NOTE: Metanorma does not support mermaid diagrams yet, so the diagram source
+// is included as a comment below.
+//
+// [mermaid]
+// ....
+// sequenceDiagram
+//     autonumber
+//     actor Agent
+//     participant Domain as Domain
+//     participant ActSchema as ActivitySchema
+//     participant Gov as Governance Engine
+//     participant PolicyReg as Policy Catalog
+//     participant Norms as Norm Resolver
+//     participant Cred as Credential Verifier
+//     participant State as State/Fact Service
+//     participant Contract as Contract Ledger
+//     participant Enforce as Enforcement/Monitor
+//
+//     Agent->>Gov: Request decision for ActSchema within Domain (actors, time)
+//     note right of Gov: Start governance evaluation
+//
+//     Gov->>PolicyReg: Discover applicable Policies(Domain, ActSchema, actors, time)
+//     PolicyReg-->>Gov: Policies[]
+//
+//     Gov->>Norms: Collect Norms from Policies
+//     Norms-->>Gov: Norms[]
+//     Gov->>Norms: Apply precedence & resolve conflicts
+//     Norms-->>Gov: Effective Norm Set
+//
+//     Gov->>Cred: Verify Agent credentials vs CredentialProfiles (from Policies)
+//     Cred-->>Gov: Credential result (pass/fail) + evidence
+//
+//     alt Credential gate passed
+//         Gov->>State: Evaluate executable Norm conditions against current state
+//         State-->>Gov: Condition evaluation results
+//         Gov->>Gov: Combine results → decision {permit | deny | permit+obligations}
+//     else Credential gate failed
+//         Gov->>Gov: Decision = deny (insufficient credentials)
+//     end
+//
+//     Gov->>Contract: Record decision, policies/norms applied, credential & condition evidence
+//     Contract-->>Gov: ContractRef
+//
+//     opt If decision == permit ∧ obligations exist
+//         Gov->>Enforce: Start runtime obligation monitoring (policy-defined)
+//         Enforce-->>Gov: Violation events (if any)
+//         Gov->>Contract: Append enforcement actions & evidence
+//     end
+//
+//     Gov-->>Agent: Decision + ContractRef (evidence trail)
+// ....
