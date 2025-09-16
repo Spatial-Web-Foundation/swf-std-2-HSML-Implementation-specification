@@ -105,7 +105,7 @@ This section provides the detailed normative definitions for the properties of t
 [cols="2,4"]
 |===
 | Property | rdfh:partOf
-| IRI | http://purl.org/rdfh/partOf
+| IRI | identifier:[http://purl.org/rdfh/partOf]
 | JSON name | partOf
 | Requirement Level | Optional
 | Cardinality | 0..1

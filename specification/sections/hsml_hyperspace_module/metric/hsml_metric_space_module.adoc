@@ -3,7 +3,7 @@
 
 The Metric Space Submodule provides metric-aware, format-agnostic hooks that work with any element or path encoding chosen via the core hspace: mappings. It adds distance/similarity semantics without imposing a particular geometry, graph model, or storage format, and integrates cleanly with Vector, Graph, Cellular, Concept, or custom domains.
 
-Namespace. https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#
+Namespace. identifier:[https://www.spatialwebfoundation.org/ns/hsml/hyperspace/metric#]
 
 Prefix. metric:
 

@@ -48,7 +48,7 @@ Finally, the governance design incorporates privacy and security considerations.
 
 This clause provides the normative definitions for all class concepts. It is divided into two parts: classes that are defined as part of this Governance Module, and classes from the HSML Core Module that are normatively used by this module.
 
-The namespace prefix gov: refers to https://www.spatialwebfoundation.org/ns/hsml/governance#/.
+The namespace prefix `gov:` refers to identifier:[https://www.spatialwebfoundation.org/ns/hsml/governance#/].
 
 ==== Summary of Governance Module Classes
 

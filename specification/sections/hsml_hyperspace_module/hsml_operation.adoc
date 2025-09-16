@@ -65,7 +65,7 @@ while using the same inputs and producing comparable outputs.
 [cols="2,4"]
 |===
 | Property | rdf:type
-| IRI | http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+| IRI | identifier:[http://www.w3.org/1999/02/22-rdf-syntax-ns#type]
 | JSON name | @type
 | Requirement Level | Mandatory
 | Cardinality | 1..n

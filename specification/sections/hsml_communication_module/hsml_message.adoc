@@ -203,7 +203,7 @@ Messages are not required for all exchanges. Implementations materialize comm:Me
 | Domain | comm:Message
 | Range | xsd:anyURI
 | Definition | IANA media type of the payload (align with HSTP).
-| Usage Note | Use IRI form for media types (e.g., https://iana.org/assignments/media-types/application/json).
+| Usage Note | Use IRI form for media types (e.g., identifier:[https://iana.org/assignments/media-types/application/json]).
 |===
 
 [[comm-message-property-contentSchema]]
@@ -292,7 +292,7 @@ Messages are not required for all exchanges. Implementations materialize comm:Me
 [cols="2,4"]
 |===
 | Property | prov:generatedAtTime
-| IRI | http://www.w3.org/ns/prov#generatedAtTime
+| IRI | identifier:[http://www.w3.org/ns/prov#generatedAtTime]
 | JSON name | generatedAtTime
 | Requirement Level | Mandatory
 | Cardinality | 1..1
@@ -308,7 +308,7 @@ Messages are not required for all exchanges. Implementations materialize comm:Me
 [cols="2,4"]
 |===
 | Property | prov:wasAttributedTo
-| IRI | http://www.w3.org/ns/prov#wasAttributedTo
+| IRI | identifier:[http://www.w3.org/ns/prov#wasAttributedTo]
 | JSON name | wasAttributedTo
 | Requirement Level | Mandatory
 | Cardinality | 1..*
