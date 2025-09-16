@@ -6,6 +6,11 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 concurrency:
   group: "${{ github.workflow }}-${{ github.head_ref || github.ref_name }}"
   cancel-in-progress: true
@@ -17,7 +22,9 @@ jobs:
       image: metanorma/metanorma:latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          submodules: true
 
       - name: Cache Metanorma assets
         uses: actions-mn/cache@v1
@@ -26,8 +33,9 @@ jobs:
         run: metanorma --version
 
       - name: Metanorma generate site
-        uses: actions-mn/build-and-publish@v1
+        uses: actions-mn/build-and-publish@v2
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           agree-to-terms: true
           destination: artifact
           artifact-name: draft
