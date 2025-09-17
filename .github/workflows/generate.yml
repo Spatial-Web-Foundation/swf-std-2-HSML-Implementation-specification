@@ -18,8 +18,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: metanorma/metanorma:latest
+    # container:
+    #   image: metanorma/metanorma:latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,8 +29,21 @@ jobs:
       - name: Cache Metanorma assets
         uses: actions-mn/cache@v1
 
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4'
+          bundler-cache: true
+
+      # Uses https://github.com/metanorma/ci/blob/main/inkscape-setup-action/action.yml
+      - name: Install Inkscape
+        uses: metanorma/ci/inkscape-setup-action@main
+
+      - name: Update Fontist
+        run: bundle exec fontist update
+
       - name: Print Metanorma version
-        run: metanorma --version
+        run: bundle exec metanorma --version
 
       - name: Metanorma generate site
         uses: actions-mn/build-and-publish@v2
@@ -39,3 +52,4 @@ jobs:
           agree-to-terms: true
           destination: artifact
           artifact-name: draft
+          use-bundler: true
