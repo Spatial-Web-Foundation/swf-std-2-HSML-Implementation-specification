@@ -5,9 +5,10 @@
 The VectorSpace Module specializes the Hyperspace abstraction for **linear spaces**.
 It realizes the *VECTOR SPACE* concept of <<ieee-p2874,clause="6.2.x">> as a Hyperspace whose elements admit **linear combination over a scalar field**, with an abstract **origin** and **composable arrows** corresponding to linear displacements.
 
+[quote]
 ____
-“A vector space is a set whose elements can be added and scaled, satisfying linearity axioms.
-In HSML, a VectorSpace is a Hyperspace that also qualifies as a MetricSpace, exposing linear and distance semantics without prescribing a particular element encoding or path representation.”
+A vector space is a set whose elements can be added and scaled, satisfying linearity axioms.
+In HSML, a VectorSpace is a Hyperspace that also qualifies as a MetricSpace, exposing linear and distance semantics without prescribing a particular element encoding or path representation.
 ____
 
 This module is intentionally **non-prescriptive** about representation. It defines vector-space semantics and mapping hooks while allowing deployments to bind coordinates, arrays, or geometries according to their needs.
