@@ -19,6 +19,33 @@
 :local-cache-only:
 :toc-figures: true
 :toc-tables: true
+:comment: [backcover] leadership team list below
+:fullname: Gabriel René
+:role-description: leadership
+:contributor-position: Executive Director / Founder
+:fullname_2: Dan Mapes
+:role-description_2: leadership
+:contributor-position_2: Managing Director / Founder
+:fullname_3: Bastiaan den Braber
+:role-description_3: leadership
+:contributor-position_3: Director of Operations
+:fullname_4: George Percivall
+:role-description_4: leadership
+:contributor-position_4: Distinguished Engineering Fellow
+:fullname_5: Dan Richardson
+:role-description_5: leadership
+:contributor-position_5: Director of Market Analysis
+:fullname_6: Dr. Sarah Grace Manski
+:role-description_6: leadership
+:contributor-position_6: Senior Ethics Advisor
+:comment: [backcover] participants list below
+:fullname_7: Stephane Fellah
+:fullname_8: Gabriel René
+:fullname_9: Dan Mapes
+:fullname_10: Bastiaan den Braber
+:fullname_11: George Percivall
+:fullname_12: Dan Richardson
+:fullname_13: Dr. Sarah Grace Manski
 
 include::sections/00-participants.adoc[]
 
