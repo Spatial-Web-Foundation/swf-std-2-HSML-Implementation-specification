@@ -3,11 +3,14 @@ on:
   schedule:
     - cron: "0 4 * * *" # every night at 12 AM EST or 4 am UTC
 
+permissions:
+  actions: write  # to list and delete artifacts
+
 jobs:
   delete-artifacts:
     runs-on: ubuntu-latest
     steps:
       - uses: kolpav/purge-artifacts-action@v1
         with:
-          token: ${{ secrets.DELETE_ARTIFACTS_PAT }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           expire-in: 1d # Set this to 0 to delete all artifacts
